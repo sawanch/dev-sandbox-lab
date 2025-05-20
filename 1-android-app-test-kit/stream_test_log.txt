@@ -1,0 +1,38 @@
+🔄 Testing: [H101] - Astro Awani - ✅ Astro Awani is WORKING https://d2idp3hzkhjpih.cloudfront.net/out/v1/4b85d9c2bf97413eb0c9fd875599b837/index.m3u8
+🔄 Testing: [H102] - Berita RTM - ✅ Berita RTM is WORKING https://d25tgymtnqzu8s.cloudfront.net/smil:berita/manifest.mpd
+🔄 Testing: [H103] - TV1 - ✅ TV1 is WORKING https://d25tgymtnqzu8s.cloudfront.net/smil:tv1/manifest.mpd
+🔄 Testing: [H104] - TV2 - ✅ TV2 is WORKING https://d25tgymtnqzu8s.cloudfront.net/smil:tv2/manifest.mpd
+🔄 Testing: [H105] - TV3 - ❌ TV3 is BROKEN https://live-streams-ssai-01.tonton.com.my/live/2dd2b7cd-1b34-4871-b669-57b5c9beca23/live.isml/.m3u8
+🔄 Testing: [H106] - TV6 - ✅ TV6 is WORKING https://d25tgymtnqzu8s.cloudfront.net/smil:tv6/manifest.mpd
+🔄 Testing: [G201] - Arabic Movies Live - ❌ Arabic Movies Live is BROKEN https://www.youtube.com/watch?v=lTTzbsSpiLo
+🔄 Testing: [G202] - Arabica TV - ✅ Arabica TV is WORKING http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8
+🔄 Testing: [G203] - Arirang TV - ✅ Arirang TV is WORKING https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+🔄 Testing: [G204] - CNBC Indonesia - ✅ CNBC Indonesia is WORKING https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/playlist.m3u8
+🔄 Testing: [G220] - TRT World - ❌ TRT World is BROKEN https://tv-trtworld.live.trt.com.tr/master.m3u8
+
+===============================
+✅ Total links tested : 11
+✅ Links working      : 8
+❌ Links broken       : 3
+===============================
+
+▶ H1 items:
+✅ [Working]
+H101_sep_Astro Awani_sep_WORKING_sep_https://d2idp3hzkhjpih.cloudfront.net/out/v1/4b85d9c2bf97413eb0c9fd875599b837/index.m3u8
+H102_sep_Berita RTM_sep_WORKING_sep_https://d25tgymtnqzu8s.cloudfront.net/smil:berita/manifest.mpd
+H103_sep_TV1_sep_WORKING_sep_https://d25tgymtnqzu8s.cloudfront.net/smil:tv1/manifest.mpd
+H104_sep_TV2_sep_WORKING_sep_https://d25tgymtnqzu8s.cloudfront.net/smil:tv2/manifest.mpd
+H106_sep_TV6_sep_WORKING_sep_https://d25tgymtnqzu8s.cloudfront.net/smil:tv6/manifest.mpd
+
+❌ [Broken]
+H105_sep_TV3_sep_BROKEN_sep_https://live-streams-ssai-01.tonton.com.my/live/2dd2b7cd-1b34-4871-b669-57b5c9beca23/live.isml/.m3u8
+
+▶ G2 items:
+✅ [Working]
+G202_sep_Arabica TV_sep_WORKING_sep_http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8
+G203_sep_Arirang TV_sep_WORKING_sep_https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+G204_sep_CNBC Indonesia_sep_WORKING_sep_https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/playlist.m3u8
+
+❌ [Broken]
+G201_sep_Arabic Movies Live_sep_BROKEN_sep_https://www.youtube.com/watch?v=lTTzbsSpiLo
+G220_sep_TRT World_sep_BROKEN_sep_https://tv-trtworld.live.trt.com.tr/master.m3u8

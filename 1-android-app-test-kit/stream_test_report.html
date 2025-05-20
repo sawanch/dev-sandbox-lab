@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Stream Test Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { margin-top: 40px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px 12px; border: 1px solid #ccc; text-align: left; }
+    .working { background-color: #e0f7e9; }
+    .broken { background-color: #fde0e0; }
+    .section { margin-bottom: 40px; }
+    button { padding: 4px 10px; }
+  </style>
+  <script>
+  function copyToClipboard(text, button) {
+    navigator.clipboard.writeText(text).then(() => {
+      const toast = document.createElement("div");
+      toast.textContent = "Copied!";
+      toast.style.position = "absolute";
+      toast.style.backgroundColor = "#333";
+      toast.style.color = "#fff";
+      toast.style.padding = "4px 8px";
+      toast.style.borderRadius = "4px";
+      toast.style.fontSize = "12px";
+      toast.style.whiteSpace = "nowrap";
+      toast.style.zIndex = 1000;
+      toast.style.transform = "translateY(-150%)";
+      toast.style.opacity = "0.95";
+      toast.style.boxShadow = "0 0 5px rgba(0, 0, 0, 0.2)";
+
+      // Position the toast relative to the button
+      const rect = button.getBoundingClientRect();
+      toast.style.left = rect.left + window.scrollX + "px";
+      toast.style.top = rect.top + window.scrollY - 20 + "px";
+
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.remove();
+      }, 1200); // fades after 1.2 seconds
+    });
+  }
+</script>
+</head>
+<body>
+<h1>📺 Stream Test Report</h1>
+<p>Generated on Fri May 16 09:25:15 PDT 2025</p>
+<h2>▶ H1 items</h2>
+<h3>✅ [Working]</h3><table><tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>
+<tr class='working'><td>H101</td><td>Astro Awani</td><td>https://d2idp3hzkhjpih.cloudfront.net/out/v1/4b85d9c2bf97413eb0c9fd875599b837/index.m3u8</td><td><button onclick="copyToClipboard('https://d2idp3hzkhjpih.cloudfront.net/out/v1/4b85d9c2bf97413eb0c9fd875599b837/index.m3u8', this)">Copy</button></td></tr>
+<tr class='working'><td>H102</td><td>Berita RTM</td><td>https://d25tgymtnqzu8s.cloudfront.net/smil:berita/manifest.mpd</td><td><button onclick="copyToClipboard('https://d25tgymtnqzu8s.cloudfront.net/smil:berita/manifest.mpd', this)">Copy</button></td></tr>
+<tr class='working'><td>H103</td><td>TV1</td><td>https://d25tgymtnqzu8s.cloudfront.net/smil:tv1/manifest.mpd</td><td><button onclick="copyToClipboard('https://d25tgymtnqzu8s.cloudfront.net/smil:tv1/manifest.mpd', this)">Copy</button></td></tr>
+<tr class='working'><td>H104</td><td>TV2</td><td>https://d25tgymtnqzu8s.cloudfront.net/smil:tv2/manifest.mpd</td><td><button onclick="copyToClipboard('https://d25tgymtnqzu8s.cloudfront.net/smil:tv2/manifest.mpd', this)">Copy</button></td></tr>
+<tr class='working'><td>H106</td><td>TV6</td><td>https://d25tgymtnqzu8s.cloudfront.net/smil:tv6/manifest.mpd</td><td><button onclick="copyToClipboard('https://d25tgymtnqzu8s.cloudfront.net/smil:tv6/manifest.mpd', this)">Copy</button></td></tr>
+</table><br>
+<h3>❌ [Broken]</h3><table><tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>
+<tr class='broken'><td>H105</td><td>TV3</td><td>https://live-streams-ssai-01.tonton.com.my/live/2dd2b7cd-1b34-4871-b669-57b5c9beca23/live.isml/.m3u8</td><td><button onclick="copyToClipboard('https://live-streams-ssai-01.tonton.com.my/live/2dd2b7cd-1b34-4871-b669-57b5c9beca23/live.isml/.m3u8', this)">Copy</button></td></tr>
+</table>
+<h2>▶ G2 items</h2>
+<h3>✅ [Working]</h3><table><tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>
+<tr class='working'><td>G202</td><td>Arabica TV</td><td>http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8</td><td><button onclick="copyToClipboard('http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8', this)">Copy</button></td></tr>
+<tr class='working'><td>G203</td><td>Arirang TV</td><td>https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8</td><td><button onclick="copyToClipboard('https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8', this)">Copy</button></td></tr>
+<tr class='working'><td>G204</td><td>CNBC Indonesia</td><td>https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/playlist.m3u8</td><td><button onclick="copyToClipboard('https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/playlist.m3u8', this)">Copy</button></td></tr>
+</table><br>
+<h3>❌ [Broken]</h3><table><tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>
+<tr class='broken'><td>G201</td><td>Arabic Movies Live</td><td>https://www.youtube.com/watch?v=lTTzbsSpiLo</td><td><button onclick="copyToClipboard('https://www.youtube.com/watch?v=lTTzbsSpiLo', this)">Copy</button></td></tr>
+<tr class='broken'><td>G220</td><td>TRT World</td><td>https://tv-trtworld.live.trt.com.tr/master.m3u8</td><td><button onclick="copyToClipboard('https://tv-trtworld.live.trt.com.tr/master.m3u8', this)">Copy</button></td></tr>
+</table>
+</body></html>
