@@ -165,7 +165,14 @@ echo "✅ All done. Log file saved to: $LOG_FILE"
 # Generate HTML clickable report
 {
   echo "<h2>▶ H1 items</h2>"
-  echo "<h3>✅ [Working]</h3><table><tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>"
+  echo "<h3>✅ [Working]</h3><table>
+        <colgroup>
+          <col style='width: 15%;'>
+          <col style='width: 20%;'>
+          <col style='width: 50%;'>
+          <col style='width: 15%;'>
+        </colgroup>
+        <tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>"
   for entry in "${h1_items[@]}"; do
     if [[ "$entry" == *"WORKING"* ]]; then
       id=$(echo "$entry" | awk -F '_sep_' '{print $1}')
@@ -176,7 +183,14 @@ echo "✅ All done. Log file saved to: $LOG_FILE"
   done
   echo "</table><br>"
 
-  echo "<h3>❌ [Broken]</h3><table><tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>"
+  echo "<h3>❌ [Broken]</h3><table>
+        <colgroup>
+          <col style='width: 15%;'>
+          <col style='width: 20%;'>
+          <col style='width: 50%;'>
+          <col style='width: 15%;'>
+        </colgroup>
+        <tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>"
   for entry in "${h1_items[@]}"; do
     if [[ "$entry" == *"BROKEN"* ]]; then
       id=$(echo "$entry" | awk -F '_sep_' '{print $1}')
@@ -188,7 +202,14 @@ echo "✅ All done. Log file saved to: $LOG_FILE"
   echo "</table>"
 
   echo "<h2>▶ G2 items</h2>"
-  echo "<h3>✅ [Working]</h3><table><tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>"
+  echo "<h3>✅ [Working]</h3><table>
+        <colgroup>
+          <col style='width: 15%;'>
+          <col style='width: 20%;'>
+          <col style='width: 50%;'>
+          <col style='width: 15%;'>
+        </colgroup>
+        <tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>"
   for entry in "${g2_items[@]}"; do
     if [[ "$entry" == *"WORKING"* ]]; then
       id=$(echo "$entry" | awk -F '_sep_' '{print $1}')
@@ -199,7 +220,14 @@ echo "✅ All done. Log file saved to: $LOG_FILE"
   done
   echo "</table><br>"
 
-  echo "<h3>❌ [Broken]</h3><table><tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>"
+  echo "<h3>❌ [Broken]</h3><table>
+        <colgroup>
+          <col style='width: 15%;'>
+          <col style='width: 20%;'>
+          <col style='width: 50%;'>
+          <col style='width: 15%;'>
+        </colgroup>
+        <tr><th>Item ID</th><th>Title</th><th>Link</th><th>Action</th></tr>"
   for entry in "${g2_items[@]}"; do
     if [[ "$entry" == *"BROKEN"* ]]; then
       id=$(echo "$entry" | awk -F '_sep_' '{print $1}')

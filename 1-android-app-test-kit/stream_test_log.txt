@@ -4,16 +4,49 @@
 🔄 Testing: [H104] - TV2 - ✅ TV2 is WORKING https://d25tgymtnqzu8s.cloudfront.net/smil:tv2/manifest.mpd
 🔄 Testing: [H105] - TV3 - ❌ TV3 is BROKEN https://live-streams-ssai-01.tonton.com.my/live/2dd2b7cd-1b34-4871-b669-57b5c9beca23/live.isml/.m3u8
 🔄 Testing: [H106] - TV6 - ✅ TV6 is WORKING https://d25tgymtnqzu8s.cloudfront.net/smil:tv6/manifest.mpd
+🔄 Testing: [H107] - Bernama TV - ❌ Bernama TV is BROKEN https://ythls.armelin.one/channel/UCcZg5r9hBqK_VPUT2I7eYVw.m3u8
+🔄 Testing: [H108] - TV9 - ❌ TV9 is BROKEN https://live-streams-ssai-01.tonton.com.my/live/2020783a-0303-401a-9c92-b7c3c9108c0b/live.isml/.m3u8
+🔄 Testing: [H109] - TV Ikim - ❌ TV Ikim is BROKEN https://edge-sg1.vediostream.com/abr/tvikim/playlist.m3u8
+🔄 Testing: [H110] - Didik TV - ❌ Didik TV is BROKEN https://live-streams-ssai-01.tonton.com.my/live/0e27ef78-4cc9-4c62-bec9-5c946c9e7354/live.isml/.m3u8
+🔄 Testing: [H111] - TV Okey - ✅ TV Okey is WORKING https://d25tgymtnqzu8s.cloudfront.net/smil:okey/manifest.mpd
+🔄 Testing: [H112] - TV Selangor - ❌ TV Selangor is BROKEN https://stream.smg.my/live/tvs.m3u8
+🔄 Testing: [H113] - RTB Aneka - ✅ RTB Aneka is WORKING https://d1211whpimeups.cloudfront.net/smil:rtb2/chunklist_b1120000_sleng.m3u8
+🔄 Testing: [H114] - RTB Sukmaindera - ✅ RTB Sukmaindera is WORKING https://d1211whpimeups.cloudfront.net/smil:rtb1/index.m3u8
+🔄 Testing: [H115] - Maah TV - ✅ Maah TV is WORKING https://hls.maahtv.live/hls/stream.m3u8
+🔄 Testing: [H116] - 8TV Malaysia - ❌ 8TV Malaysia is BROKEN https://live-streams-ssai-01.tonton.com.my/live/a884c33b-6b11-4433-8bf9-a8899939e224/live.isml/.m3u8
+🔄 Testing: [H117] - Suria FM - ❌ Suria FM is BROKEN https://www.youtube.com/watch?v=nGxSU-QiIgs
+🔄 Testing: [H118] - Molek TV - ❌ Molek TV is BROKEN https://www.youtube.com/watch?v=ffCgZetLT0Q
+🔄 Testing: [H119] - RTM Sukan - ✅ RTM Sukan is WORKING https://d25tgymtnqzu8s.cloudfront.net/smil:sukan/manifest.mpd
+🔄 Testing: [H120] - Berita Satu - ❌ Berita Satu is BROKEN https://b1news.beritasatumedia.com/Beritasatu/B1News_1280x720.m3u8
+🔄 Testing: [H121] - Al Jazeera English - ✅ Al Jazeera English is WORKING https://live-hls-web-aje.getaj.net/AJE/01.m3u8
+🔄 Testing: [H122] - CNA Live - ✅ CNA Live is WORKING https://www.youtube.com/watch?v=XWq5kBlakcQ
+🔄 Testing: [H123] - Red Bull TV - ✅ Red Bull TV is WORKING https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
+🔄 Testing: [H124] - English Movies - ❌ English Movies is BROKEN https://rpn1.bozztv.com/36bay2/gusa-tvsclassicmovies/index.m3u8
 🔄 Testing: [G201] - Arabic Movies Live - ❌ Arabic Movies Live is BROKEN https://www.youtube.com/watch?v=lTTzbsSpiLo
 🔄 Testing: [G202] - Arabica TV - ✅ Arabica TV is WORKING http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8
 🔄 Testing: [G203] - Arirang TV - ✅ Arirang TV is WORKING https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
 🔄 Testing: [G204] - CNBC Indonesia - ✅ CNBC Indonesia is WORKING https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/playlist.m3u8
+🔄 Testing: [G205] - CNN Indonesia - ✅ CNN Indonesia is WORKING http://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8
+🔄 Testing: [G206] - DW Live - ❌ DW Live is BROKEN https://www.youtube.com/watch?v=pqabxBKzZ6M
+🔄 Testing: [G207] - Euronews - ✅ Euronews is WORKING https://www.youtube.com/watch?v=pykpO5kQJ98
+🔄 Testing: [G208] - Franch 24 - ❌ Franch 24 is BROKEN https://www.youtube.com/watch?v=h3MuIUNCCzI
+🔄 Testing: [G209] - iFlim - ❌ iFlim is BROKEN https://cdnlive.presstv.ir/ifilmlive/smil:ifilmen.smil/playlist.m3u8
+🔄 Testing: [G210] - Iran International - ✅ Iran International is WORKING https://live.playstop.me/LS-63503-4/index.m3u8
+🔄 Testing: [G211] - KBS World TV - ✅ KBS World TV is WORKING https://www.youtube.com/watch?v=OxQQsIvJTTU
+🔄 Testing: [G212] - Miami TV - ✅ Miami TV is WORKING https://59ec5453559f0.streamlock.net/miamitv/smil:WEB/playlist.m3u8
+🔄 Testing: [G213] - Movies HD - ❌ Movies HD is BROKEN http://210.210.155.37/dr9445/h/h14/index.m3u8
+🔄 Testing: [G214] - NASA TV - ❌ NASA TV is BROKEN https://uplynkcontent.sinclairstoryline.com/channel/ddd76fdc1c0a456ba537e4f48e827d3e.m3u8
+🔄 Testing: [G215] - Red Bull TV - ✅ Red Bull TV is WORKING https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
+🔄 Testing: [G216] - Shift - ❌ Shift is BROKEN https://www.youtube.com/watch?v=e8mpj7fG7PI
+🔄 Testing: [G217] - Sky News Live - ❌ Sky News Live is BROKEN https://www.youtube.com/watch?v=9Auq9mYxFEE
+🔄 Testing: [G218] - Tamil Vision  - ❌ Tamil Vision  is BROKEN https://live.tamilvision.tv/TVI/HD/playlist.m3u8
+🔄 Testing: [G219] - TRT Cocuk - ❌ TRT Cocuk is BROKEN https://tv-trtcocuk.live.trt.com.tr/master.m3u8
 🔄 Testing: [G220] - TRT World - ❌ TRT World is BROKEN https://tv-trtworld.live.trt.com.tr/master.m3u8
 
 ===============================
-✅ Total links tested : 11
-✅ Links working      : 8
-❌ Links broken       : 3
+✅ Total links tested : 44
+✅ Links working      : 22
+❌ Links broken       : 22
 ===============================
 
 ▶ H1 items:
@@ -23,16 +56,49 @@ H102_sep_Berita RTM_sep_WORKING_sep_https://d25tgymtnqzu8s.cloudfront.net/smil:b
 H103_sep_TV1_sep_WORKING_sep_https://d25tgymtnqzu8s.cloudfront.net/smil:tv1/manifest.mpd
 H104_sep_TV2_sep_WORKING_sep_https://d25tgymtnqzu8s.cloudfront.net/smil:tv2/manifest.mpd
 H106_sep_TV6_sep_WORKING_sep_https://d25tgymtnqzu8s.cloudfront.net/smil:tv6/manifest.mpd
+H111_sep_TV Okey_sep_WORKING_sep_https://d25tgymtnqzu8s.cloudfront.net/smil:okey/manifest.mpd
+H113_sep_RTB Aneka_sep_WORKING_sep_https://d1211whpimeups.cloudfront.net/smil:rtb2/chunklist_b1120000_sleng.m3u8
+H114_sep_RTB Sukmaindera_sep_WORKING_sep_https://d1211whpimeups.cloudfront.net/smil:rtb1/index.m3u8
+H115_sep_Maah TV_sep_WORKING_sep_https://hls.maahtv.live/hls/stream.m3u8
+H119_sep_RTM Sukan_sep_WORKING_sep_https://d25tgymtnqzu8s.cloudfront.net/smil:sukan/manifest.mpd
+H121_sep_Al Jazeera English_sep_WORKING_sep_https://live-hls-web-aje.getaj.net/AJE/01.m3u8
+H122_sep_CNA Live_sep_WORKING_sep_https://www.youtube.com/watch?v=XWq5kBlakcQ
+H123_sep_Red Bull TV_sep_WORKING_sep_https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
 
 ❌ [Broken]
 H105_sep_TV3_sep_BROKEN_sep_https://live-streams-ssai-01.tonton.com.my/live/2dd2b7cd-1b34-4871-b669-57b5c9beca23/live.isml/.m3u8
+H107_sep_Bernama TV_sep_BROKEN_sep_https://ythls.armelin.one/channel/UCcZg5r9hBqK_VPUT2I7eYVw.m3u8
+H108_sep_TV9_sep_BROKEN_sep_https://live-streams-ssai-01.tonton.com.my/live/2020783a-0303-401a-9c92-b7c3c9108c0b/live.isml/.m3u8
+H109_sep_TV Ikim_sep_BROKEN_sep_https://edge-sg1.vediostream.com/abr/tvikim/playlist.m3u8
+H110_sep_Didik TV_sep_BROKEN_sep_https://live-streams-ssai-01.tonton.com.my/live/0e27ef78-4cc9-4c62-bec9-5c946c9e7354/live.isml/.m3u8
+H112_sep_TV Selangor_sep_BROKEN_sep_https://stream.smg.my/live/tvs.m3u8
+H116_sep_8TV Malaysia_sep_BROKEN_sep_https://live-streams-ssai-01.tonton.com.my/live/a884c33b-6b11-4433-8bf9-a8899939e224/live.isml/.m3u8
+H117_sep_Suria FM_sep_BROKEN_sep_https://www.youtube.com/watch?v=nGxSU-QiIgs
+H118_sep_Molek TV_sep_BROKEN_sep_https://www.youtube.com/watch?v=ffCgZetLT0Q
+H120_sep_Berita Satu_sep_BROKEN_sep_https://b1news.beritasatumedia.com/Beritasatu/B1News_1280x720.m3u8
+H124_sep_English Movies_sep_BROKEN_sep_https://rpn1.bozztv.com/36bay2/gusa-tvsclassicmovies/index.m3u8
 
 ▶ G2 items:
 ✅ [Working]
 G202_sep_Arabica TV_sep_WORKING_sep_http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8
 G203_sep_Arirang TV_sep_WORKING_sep_https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
 G204_sep_CNBC Indonesia_sep_WORKING_sep_https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/playlist.m3u8
+G205_sep_CNN Indonesia_sep_WORKING_sep_http://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8
+G207_sep_Euronews_sep_WORKING_sep_https://www.youtube.com/watch?v=pykpO5kQJ98
+G210_sep_Iran International_sep_WORKING_sep_https://live.playstop.me/LS-63503-4/index.m3u8
+G211_sep_KBS World TV_sep_WORKING_sep_https://www.youtube.com/watch?v=OxQQsIvJTTU
+G212_sep_Miami TV_sep_WORKING_sep_https://59ec5453559f0.streamlock.net/miamitv/smil:WEB/playlist.m3u8
+G215_sep_Red Bull TV_sep_WORKING_sep_https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
 
 ❌ [Broken]
 G201_sep_Arabic Movies Live_sep_BROKEN_sep_https://www.youtube.com/watch?v=lTTzbsSpiLo
+G206_sep_DW Live_sep_BROKEN_sep_https://www.youtube.com/watch?v=pqabxBKzZ6M
+G208_sep_Franch 24_sep_BROKEN_sep_https://www.youtube.com/watch?v=h3MuIUNCCzI
+G209_sep_iFlim_sep_BROKEN_sep_https://cdnlive.presstv.ir/ifilmlive/smil:ifilmen.smil/playlist.m3u8
+G213_sep_Movies HD_sep_BROKEN_sep_http://210.210.155.37/dr9445/h/h14/index.m3u8
+G214_sep_NASA TV_sep_BROKEN_sep_https://uplynkcontent.sinclairstoryline.com/channel/ddd76fdc1c0a456ba537e4f48e827d3e.m3u8
+G216_sep_Shift_sep_BROKEN_sep_https://www.youtube.com/watch?v=e8mpj7fG7PI
+G217_sep_Sky News Live_sep_BROKEN_sep_https://www.youtube.com/watch?v=9Auq9mYxFEE
+G218_sep_Tamil Vision _sep_BROKEN_sep_https://live.tamilvision.tv/TVI/HD/playlist.m3u8
+G219_sep_TRT Cocuk_sep_BROKEN_sep_https://tv-trtcocuk.live.trt.com.tr/master.m3u8
 G220_sep_TRT World_sep_BROKEN_sep_https://tv-trtworld.live.trt.com.tr/master.m3u8
