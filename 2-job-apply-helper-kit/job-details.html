@@ -390,5 +390,91 @@
 
   </script>
 
+
+  <style>
+  #sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 220px;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    height: 90%;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+
+  #sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+
+  #sidebar h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  #sidebar ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  #sidebar ul li {
+    margin: 6px 0;
+  }
+
+  #sidebar ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+  }
+
+  #toggleSidebar {
+    position: fixed;
+    left: 0;
+    top: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 6px 10px;
+    cursor: pointer;
+    z-index: 1100;
+    border-radius: 0 5px 5px 0;
+    font-size: 14px;
+  }
+</style>
+
+<div id="toggleSidebar">☰</div>
+<div id="sidebar" class="collapsed">
+  <h3>Sections</h3>
+  <ul id="sectionList"></ul>
+</div>
+
+<script>
+  // Create index from <h2> elements
+  const sectionList = document.getElementById('sectionList');
+  const headings = document.querySelectorAll('.card h2');
+
+  headings.forEach((heading, index) => {
+    const id = `section-${index}`;
+    heading.id = id;
+
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="#${id}">${heading.innerText}</a>`;
+    sectionList.appendChild(li);
+  });
+
+  // Toggle Sidebar
+  const sidebar = document.getElementById('sidebar');
+  const toggleButton = document.getElementById('toggleSidebar');
+  toggleButton.onclick = () => {
+    sidebar.classList.toggle('collapsed');
+  };
+</script>
+
+
+
+
 </body>
 </html>
