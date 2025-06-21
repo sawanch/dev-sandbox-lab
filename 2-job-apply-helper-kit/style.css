@@ -53,7 +53,7 @@ body {
   /* BUTTONS */
   .copy-btn{
     padding: 8px 20px;        /* Increase padding for size */
-    min-width: 500px;         /* Set a wider base width */
+   /*  min-width: 500px;         Set a wider base width */
     font-size: 14px;
     background-color: #007bff;
     color: white;
@@ -61,6 +61,7 @@ body {
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: auto;
   }
 
   .bullet-copy-btn {
@@ -227,7 +228,7 @@ body {
 
   @media (min-width: 768px) {
     .copy-btn {
-      min-width: 150px; /* Wider buttons on desktop screens */
+      min-width: 200px; /* Wider buttons on desktop screens */
     }
   }
   
