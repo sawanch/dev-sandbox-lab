@@ -23,7 +23,7 @@ body {
   
   /* CARDS */
   .card {
-    background: white;
+    background: #90e8cf;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -38,6 +38,10 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
+    margin: 6px 0;
+    padding: 6px 8px;                     /* small padding inside the row */
+    background-color: #f0f8ff;           /* very light blue */
+    border-radius: 4px;                  /* slight rounding for aesthetics */
   }
   
   .text {
@@ -47,16 +51,33 @@ body {
   }
   
   /* BUTTONS */
-  .copy-btn,
-  .bullet-copy-btn {
-    background: #007bff;
+  .copy-btn{
+    padding: 8px 20px;        /* Increase padding for size */
+    min-width: 500px;         /* Set a wider base width */
+    font-size: 14px;
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 6px 12px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 14px;
+    transition: background-color 0.3s;
   }
+
+  .bullet-copy-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;         /* allow natural width */
+    min-width: unset;    /* remove the shared min-width */
+  }
+  
   
   .copy-btn:hover,
   .bullet-copy-btn:hover {
@@ -203,4 +224,11 @@ body {
       width: 250px;
     }
   }
+
+  @media (min-width: 768px) {
+    .copy-btn {
+      min-width: 150px; /* Wider buttons on desktop screens */
+    }
+  }
+  
   
