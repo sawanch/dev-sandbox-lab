@@ -4,112 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Job Info Copy Tool</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background: #f4f4f4;
-      margin: 0;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    .card {
-      background: #fff;
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 600px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .field {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 10px 0;
-    }
-    .text {
-      flex: 1;
-      padding-right: 10px;
-      word-wrap: break-word;
-    }
-    .copy-btn, .bullet-copy-btn {
-      background: #007bff;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-    .copy-btn:hover, .bullet-copy-btn:hover {
-      background: #0056b3;
-    }
-    .bullet-box {
-      background: #f8f9fa;
-      padding: 15px;
-      margin-top: 15px;
-      border-left: 4px solid #007bff;
-      border-radius: 8px;
-      position: relative;
-    }
-    .bullet-box ul {
-      padding-left: 20px;
-      margin: 0;
-    }
-    .bullet-copy-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-    /* Toast Styling (Top) */
-    #toast {
-      visibility: hidden;
-      min-width: 200px;
-      background-color: #28a745;
-      color: white;
-      text-align: center;
-      border-radius: 6px;
-      padding: 12px;
-      position: fixed;
-      z-index: 10;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 20px;
-      font-size: 16px;
-    }
-    #toast.show {
-      visibility: visible;
-      animation: fadein 0.5s, fadeout 0.5s 1.5s;
-    }
-    @keyframes fadein {
-      from {top: 0; opacity: 0;}
-      to {top: 20px; opacity: 1;}
-    }
-    @keyframes fadeout {
-      from {top: 20px; opacity: 1;}
-      to {top: 0; opacity: 0;}
-    }
-
-    @media screen and (max-width: 600px) {
-      .card {
-        padding: 15px;
-      }
-      .copy-btn, .bullet-copy-btn {
-        padding: 6px 10px;
-        font-size: 13px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <h1>Job Applications Info Copy Tool</h1>
 
   <!-- Personal Details -->
+<div id="main">  
   <div class="card">
   <h2>Personal Details</h2>
+  <div class="field"><div class="text" id="per0">Sawan Chakraborty</div><button class="copy-btn" onclick="copy('per0')">Copy</button></div>
   <div class="field"><div class="text" id="per1">Sawan</div><button class="copy-btn" onclick="copy('per1')">Copy</button></div>
   <div class="field"><div class="text" id="per2">Chakraborty</div><button class="copy-btn" onclick="copy('per2')">Copy</button></div>
 
@@ -131,9 +36,9 @@
     <div class="field"><div class="text" id="cal1">Caltrain</div><button class="copy-btn" onclick="copy('cal1')">Copy</button></div>
     <div class="field"><div class="text" id="cal2">Software Engineering Intern</div><button class="copy-btn" onclick="copy('cal2')">Copy</button></div>
     <div class="field"><div class="text" id="cal3">San Carlos</div><button class="copy-btn" onclick="copy('cal3')">Copy</button></div>
-    <div class="field"><div class="text" id="cal33">California</div><button class="copy-btn" onclick="copy('cal3')">Copy</button></div>
-    <div class="field"><div class="text" id="cal34">San Carlos, California</div><button class="copy-btn" onclick="copy('cal3')">Copy</button></div>
-    <div class="field"><div class="text" id="cal35">San Carlos, CA, US</div><button class="copy-btn" onclick="copy('cal3')">Copy</button></div>
+    <div class="field"><div class="text" id="cal33">California</div><button class="copy-btn" onclick="copy('cal33')">Copy</button></div>
+    <div class="field"><div class="text" id="cal34">San Carlos, California</div><button class="copy-btn" onclick="copy('cal34')">Copy</button></div>
+    <div class="field"><div class="text" id="cal35">San Carlos, CA, US</div><button class="copy-btn" onclick="copy('cal35')">Copy</button></div>
 
     <div class="field"><div class="text" id="cal4">06/2024</div><button class="copy-btn" onclick="copy('cal4')">Copy</button></div>
     <div class="field"><div class="text" id="cal5">01/2025</div><button class="copy-btn" onclick="copy('cal5')">Copy</button></div>
@@ -155,9 +60,9 @@
     <div class="field"><div class="text" id="scu1">SCU Frugal Innovation Hub</div><button class="copy-btn" onclick="copy('scu1')">Copy</button></div>
     <div class="field"><div class="text" id="scu2">Software Engineer</div><button class="copy-btn" onclick="copy('scu2')">Copy</button></div>
     <div class="field"><div class="text" id="scu3">Santa Clara</div><button class="copy-btn" onclick="copy('scu3')">Copy</button></div>
-    <div class="field"><div class="text" id="scu33">California</div><button class="copy-btn" onclick="copy('scu3')">Copy</button></div>
-    <div class="field"><div class="text" id="scu34">Santa Clara, California</div><button class="copy-btn" onclick="copy('scu3')">Copy</button></div>
-    <div class="field"><div class="text" id="scu35">Santa Clara, CA, US</div><button class="copy-btn" onclick="copy('scu3')">Copy</button></div>
+    <div class="field"><div class="text" id="scu33">California</div><button class="copy-btn" onclick="copy('scu33')">Copy</button></div>
+    <div class="field"><div class="text" id="scu34">Santa Clara, California</div><button class="copy-btn" onclick="copy('scu34')">Copy</button></div>
+    <div class="field"><div class="text" id="scu35">Santa Clara, CA, US</div><button class="copy-btn" onclick="copy('scu35')">Copy</button></div>
     <div class="field"><div class="text" id="scu4">04/2024</div><button class="copy-btn" onclick="copy('scu4')">Copy</button></div>
     <div class="field"><div class="text" id="scu5">06/2024</div><button class="copy-btn" onclick="copy('scu5')">Copy</button></div>
     <div class="field"><div class="text" id="scu6">Developed 'Equation2Success' anti-bullying app using Android, boosting user engagement by 30% with a user-friendly interface and ticketing system.</div><button class="copy-btn" onclick="copy('scu6')">Copy</button></div>
@@ -178,9 +83,9 @@
   <div class="field"><div class="text" id="acc1">Accenture</div><button class="copy-btn" onclick="copy('acc1')">Copy</button></div>
   <div class="field"><div class="text" id="acc2">Software Development Engineer</div><button class="copy-btn" onclick="copy('acc2')">Copy</button></div>
   <div class="field"><div class="text" id="acc3">Bangalore</div><button class="copy-btn" onclick="copy('acc3')">Copy</button></div>
-  <div class="field"><div class="text" id="acc33">Karnataka</div><button class="copy-btn" onclick="copy('acc3')">Copy</button></div>
-  <div class="field"><div class="text" id="acc34">Bangalore, Karnataka</div><button class="copy-btn" onclick="copy('acc3')">Copy</button></div>
-  <div class="field"><div class="text" id="acc35">Bangalore, KA, India</div><button class="copy-btn" onclick="copy('acc3')">Copy</button></div>
+  <div class="field"><div class="text" id="acc33">Karnataka</div><button class="copy-btn" onclick="copy('acc33')">Copy</button></div>
+  <div class="field"><div class="text" id="acc34">Bangalore, Karnataka</div><button class="copy-btn" onclick="copy('acc34')">Copy</button></div>
+  <div class="field"><div class="text" id="acc35">Bangalore, KA, India</div><button class="copy-btn" onclick="copy('acc35')">Copy</button></div>
   <div class="field"><div class="text" id="acc4a">07/2021</div><button class="copy-btn" onclick="copy('acc4a')">Copy</button></div>
   <div class="field"><div class="text" id="acc5a">12/2022</div><button class="copy-btn" onclick="copy('acc5a')">Copy</button></div>
   <div class="field"><div class="text" id="acc6">Developed and deployed RESTful APIs using Java, automating 70% of tasks and enhancing Dyson Europe’s UX, improving performance by 50%. Conducted automated tests and QA checks, increasing quality by 25% and reducing issues by 40%.</div><button class="copy-btn" onclick="copy('acc6')">Copy</button></div>
@@ -201,9 +106,9 @@
   <div class="field"><div class="text" id="kig1">Kigyan Techno Solutions</div><button class="copy-btn" onclick="copy('kig1')">Copy</button></div>
   <div class="field"><div class="text" id="kig2">Software Engineering Intern</div><button class="copy-btn" onclick="copy('kig2')">Copy</button></div>
   <div class="field"><div class="text" id="kig3">Bengaluru</div><button class="copy-btn" onclick="copy('kig3')">Copy</button></div>
-  <div class="field"><div class="text" id="kig33">Karnataka</div><button class="copy-btn" onclick="copy('kig3')">Copy</button></div>
-  <div class="field"><div class="text" id="kig34">Bengaluru, Karnataka</div><button class="copy-btn" onclick="copy('kig3')">Copy</button></div>
-  <div class="field"><div class="text" id="kig35">Bengaluru, KA, India</div><button class="copy-btn" onclick="copy('kig3')">Copy</button></div>
+  <div class="field"><div class="text" id="kig33">Karnataka</div><button class="copy-btn" onclick="copy('kig33')">Copy</button></div>
+  <div class="field"><div class="text" id="kig34">Bengaluru, Karnataka</div><button class="copy-btn" onclick="copy('kig34')">Copy</button></div>
+  <div class="field"><div class="text" id="kig35">Bengaluru, KA, India</div><button class="copy-btn" onclick="copy('kig35')">Copy</button></div>
   <div class="field"><div class="text" id="kig4a">03/2021</div><button class="copy-btn" onclick="copy('kig4a')">Copy</button></div>
   <div class="field"><div class="text" id="kig5a">04/2021</div><button class="copy-btn" onclick="copy('kig5a')">Copy</button></div>
   <div class="field"><div class="text" id="kig6">Launched 'Retail Promotion Planning' module with video streaming on Android, increasing user engagement by 50% and attracting 10,000 new users in 3 months. Optimized code by analyzing app logs which reduced crashes by 40%.</div><button class="copy-btn" onclick="copy('kig6')">Copy</button></div>
@@ -223,9 +128,9 @@
   <div class="field"><div class="text" id="edu2">Master of Science</div><button class="copy-btn" onclick="copy('edu2')">Copy</button></div>
   <div class="field"><div class="text" id="edu3">Computer Science & Engineering</div><button class="copy-btn" onclick="copy('edu3')">Copy</button></div>
   <div class="field"><div class="text" id="edu4">Santa Clara</div><button class="copy-btn" onclick="copy('edu4')">Copy</button></div>
-  <div class="field"><div class="text" id="edu43">California</div><button class="copy-btn" onclick="copy('edu4')">Copy</button></div>
-  <div class="field"><div class="text" id="edu44">Santa Clara, California</div><button class="copy-btn" onclick="copy('edu4')">Copy</button></div>
-  <div class="field"><div class="text" id="edu45">Santa Clara, CA, US</div><button class="copy-btn" onclick="copy('edu4')">Copy</button></div>
+  <div class="field"><div class="text" id="edu43">California</div><button class="copy-btn" onclick="copy('edu43')">Copy</button></div>
+  <div class="field"><div class="text" id="edu44">Santa Clara, California</div><button class="copy-btn" onclick="copy('edu44')">Copy</button></div>
+  <div class="field"><div class="text" id="edu45">Santa Clara, CA, US</div><button class="copy-btn" onclick="copy('edu45')">Copy</button></div>
   <div class="field"><div class="text" id="edu5">04/2023</div><button class="copy-btn" onclick="copy('edu5')">Copy</button></div>
   <div class="field"><div class="text" id="edu6">03/2025</div><button class="copy-btn" onclick="copy('edu6')">Copy</button></div>
   <div class="field"><div class="text" id="edu7">3.9</div><button class="copy-btn" onclick="copy('edu7')">Copy</button></div>
@@ -238,9 +143,9 @@
   <div class="field"><div class="text" id="edu9">Bachelor of Technology</div><button class="copy-btn" onclick="copy('edu9')">Copy</button></div>
   <div class="field"><div class="text" id="edu10">Computer Science & Engineering</div><button class="copy-btn" onclick="copy('edu10')">Copy</button></div>
   <div class="field"><div class="text" id="edu11">Bangalore</div><button class="copy-btn" onclick="copy('edu11')">Copy</button></div>
-  <div class="field"><div class="text" id="edu113">Karnataka</div><button class="copy-btn" onclick="copy('edu11')">Copy</button></div>
-  <div class="field"><div class="text" id="edu114">Bangalore, Karnataka</div><button class="copy-btn" onclick="copy('edu11')">Copy</button></div>
-  <div class="field"><div class="text" id="edu115">Bangalore, KA, India</div><button class="copy-btn" onclick="copy('edu11')">Copy</button></div>
+  <div class="field"><div class="text" id="edu113">Karnataka</div><button class="copy-btn" onclick="copy('edu113')">Copy</button></div>
+  <div class="field"><div class="text" id="edu114">Bangalore, Karnataka</div><button class="copy-btn" onclick="copy('edu114')">Copy</button></div>
+  <div class="field"><div class="text" id="edu115">Bangalore, KA, India</div><button class="copy-btn" onclick="copy('edu115')">Copy</button></div>
   <div class="field"><div class="text" id="edu12">08/2017</div><button class="copy-btn" onclick="copy('edu12')">Copy</button></div>
   <div class="field"><div class="text" id="edu13">06/2021</div><button class="copy-btn" onclick="copy('edu13')">Copy</button></div>
   <div class="field"><div class="text" id="edu14">4.0</div><button class="copy-btn" onclick="copy('edu14')">Copy</button></div>
@@ -294,6 +199,7 @@
       <button class="copy-btn">Download Resume (PDF)</button>
     </a>
   </div>
+</div>
 </div>
 
 
@@ -392,57 +298,7 @@
 
 
   <style>
-  #sidebar {
-    position: fixed;
-    left: 0;
-    top: 60px;
-    width: 220px;
-    background-color: #fff;
-    border-right: 1px solid #ccc;
-    padding: 10px;
-    height: 90%;
-    overflow-y: auto;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    z-index: 1000;
-    transition: transform 0.3s ease;
-  }
-
-  #sidebar.collapsed {
-    transform: translateX(-100%);
-  }
-
-  #sidebar h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  #sidebar ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  #sidebar ul li {
-    margin: 6px 0;
-  }
-
-  #sidebar ul li a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 14px;
-  }
-
-  #toggleSidebar {
-    position: fixed;
-    left: 0;
-    top: 20px;
-    background-color: #007bff;
-    color: white;
-    padding: 6px 10px;
-    cursor: pointer;
-    z-index: 1100;
-    border-radius: 0 5px 5px 0;
-    font-size: 14px;
-  }
+ 
 </style>
 
 <div id="toggleSidebar">☰</div>
