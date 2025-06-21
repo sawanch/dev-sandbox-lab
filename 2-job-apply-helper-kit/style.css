@@ -120,16 +120,17 @@ body {
     left: 0;
     top: 60px;
     width: 360px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-right: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.01); /* Ultra-light white */
+    border-right: 1px solid rgba(255, 255, 255, 0.05); /* Soft border */
     padding: 15px;
     height: 90%;
     overflow-y: auto;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.001);
+    box-shadow: none; /* Remove drop shadow */
     z-index: 1000;
     transition: transform 0.3s ease;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px); /* Minimized blur */
   }
+  
   
   #sidebar.collapsed {
     transform: translateX(-100%);
