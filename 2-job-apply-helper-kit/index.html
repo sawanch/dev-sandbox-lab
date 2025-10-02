@@ -312,6 +312,357 @@
 
 
 
+<!-- Referral Email Generator -->
+<div class="card">
+  <h2>Referral Email Generator</h2>
+
+  <!-- Input fields -->
+  <div class="field">
+    <label>Company Name:</label>
+    <input type="text" id="companyName" placeholder="e.g., PayPal">
+  </div>
+  
+  <div class="field">
+    <label>Job Position:</label>
+    <input type="text" id="jobPosition" placeholder="e.g., Software Engineer (Recent Graduate)">
+  </div>
+  
+  <div class="field">
+    <label>Job ID:</label>
+    <input type="text" id="jobId" placeholder="e.g., R0129930">
+  </div>
+  
+  <div class="field">
+    <label>Job Link:</label>
+    <input type="text" id="jobLink" placeholder="Paste job link here">
+  </div>
+  
+  <div class="field">
+    <label>Recruiter Name:</label>
+    <input type="text" id="recruiterName" placeholder="e.g., Corine">
+  </div>
+
+  <!-- Skills checkboxes -->
+  <div class="field">
+    <label>Select Key Skills (choose at least one):</label>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
+      <label><input type="checkbox" class="jobSkill" value="Java"> Java</label>
+      <label><input type="checkbox" class="jobSkill" value="Python"> Python</label>
+      <label><input type="checkbox" class="jobSkill" value="REST APIs"> REST APIs</label>
+      <label><input type="checkbox" class="jobSkill" value="Spring Boot"> Spring Boot</label>
+      <label><input type="checkbox" class="jobSkill" value="SQL"> SQL</label>
+      <label><input type="checkbox" class="jobSkill" value="Agile"> Agile</label>
+      <label><input type="checkbox" class="jobSkill" value="Backend Development"> Backend Development</label>
+      <label><input type="checkbox" class="jobSkill" value="Cybersecurity"> Cybersecurity</label>
+      <label><input type="checkbox" class="jobSkill" value="Cloud"> Cloud</label>
+      <label><input type="checkbox" class="jobSkill" value="DevOps"> DevOps</label>
+    </div>
+  </div>
+
+  <!-- Generate Button -->
+  <div style="text-align: center; margin-top: 15px;">
+    <button class="copy-btn" onclick="generateEmail()">Generate Email</button>
+  </div>
+
+  <!-- Generated Subjects -->
+  <div class="field" style="margin-top: 15px;">
+    <strong>Subject Option 1:</strong>
+    <div class="text" id="emailSubject1">Your first subject will appear here...</div>
+    <button class="copy-btn" onclick="copy('emailSubject1')">Copy Subject 1</button>
+  </div>
+
+  <div class="field" style="margin-top: 15px;">
+    <strong>Subject Option 2:</strong>
+    <div class="text" id="emailSubject2">Your second subject will appear here...</div>
+    <button class="copy-btn" onclick="copy('emailSubject2')">Copy Subject 2</button>
+  </div>
+
+  <!-- Generated Email -->
+  <div class="field" style="margin-top: 15px;">
+    <strong>Email Body:</strong>
+    <pre class="text" id="emailResult" style="white-space: pre-wrap;">Your generated email will appear here...</pre>
+    <button class="copy-btn" onclick="copy('emailResult')">Copy Email</button>
+  </div>
+</div>
+
+<script>
+  function generateEmail() {
+    const company = document.getElementById("companyName").value || "Company";
+    const position = document.getElementById("jobPosition").value || "Job Position";
+    const jobId = document.getElementById("jobId").value;
+    const jobLink = document.getElementById("jobLink").value || "Job Link";
+    const recruiter = document.getElementById("recruiterName").value || "Recruiter";
+
+    // Collect selected skills
+    const selectedSkills = [];
+    document.querySelectorAll(".jobSkill:checked").forEach(cb => {
+      selectedSkills.push(cb.value);
+    });
+    const skillsText = selectedSkills.length ? selectedSkills.join(", ") : "Relevant skills";
+
+    // Subject options
+    const subject1 = jobId 
+      ? `Application for ${position} (${jobId}) at ${company}` 
+      : `Application for ${position} at ${company}`;
+    const subject2 = `Seeking Referral - ${position} at ${company}`;
+    document.getElementById("emailSubject1").innerText = subject1;
+    document.getElementById("emailSubject2").innerText = subject2;
+
+    // Email body
+    const email = 
+`Hi ${recruiter},
+
+I recently applied for the ${position}${jobId ? " (Job ID: " + jobId + ")" : ""} (Job Link: ${jobLink}) at ${company} and wanted to briefly introduce myself:
+
+• Recent graduate with a Master’s in Computer Science, Santa Clara University  
+• 2.5+ years at Accenture developing Java-based REST APIs and backend systems  
+• 7-month internship at Caltrain in backend development and cybersecurity  
+• Skills: ${skillsText}  
+
+I have attached my resume for your reference and would be highly grateful for your support in moving my application forward, either through a referral or by ensuring it is in the system. I am actively interviewing and available to join immediately.
+
+Best regards,  
+Sawan C  
+M: +1 (650) 663-8910`;
+
+    document.getElementById("emailResult").innerText = email;
+  }
+</script>
+
+
+
+<!-- NetApp Referral Email Generator -->
+<div class="card">
+  <h2>Referral Email Generator (NetApp)</h2>
+
+  <!-- Input fields -->
+  <div class="field">
+    <label>Company Name:</label>
+    <input type="text" id="netCompany" placeholder="e.g., NetApp">
+  </div>
+  
+  <div class="field">
+    <label>Job Position:</label>
+    <input type="text" id="netPosition" placeholder="e.g., Software Engineer – Cloud Data Services">
+  </div>
+  
+  <div class="field">
+    <label>Job Link:</label>
+    <input type="text" id="netJobLink" placeholder="Paste job link here">
+  </div>
+  
+  <div class="field">
+    <label>Recruiter Name:</label>
+    <input type="text" id="netRecruiter" placeholder="e.g., Ammy">
+  </div>
+
+  <!-- Skills checkboxes -->
+  <div class="field">
+    <label>Select Key Skills (choose at least one):</label>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
+      <label><input type="checkbox" class="netSkill" value="Java"> Java</label>
+      <label><input type="checkbox" class="netSkill" value="Python"> Python</label>
+      <label><input type="checkbox" class="netSkill" value="REST APIs"> REST APIs</label>
+      <label><input type="checkbox" class="netSkill" value="Spring Boot"> Spring Boot</label>
+      <label><input type="checkbox" class="netSkill" value="SQL"> SQL</label>
+      <label><input type="checkbox" class="netSkill" value="Agile"> Agile</label>
+      <label><input type="checkbox" class="netSkill" value="Backend Development"> Backend Development</label>
+      <label><input type="checkbox" class="netSkill" value="Cybersecurity"> Cybersecurity</label>
+      <label><input type="checkbox" class="netSkill" value="Cloud"> Cloud</label>
+      <label><input type="checkbox" class="netSkill" value="DevOps"> DevOps</label>
+    </div>
+  </div>
+
+  <!-- Generate Button -->
+  <div style="text-align: center; margin-top: 15px;">
+    <button class="copy-btn" onclick="generateNetAppEmail()">Generate Email</button>
+  </div>
+
+  <!-- Generated Subjects -->
+  <div class="field" style="margin-top: 15px;">
+    <strong>Subject Option 1:</strong>
+    <div class="text" id="netSubject1">Your first subject will appear here...</div>
+    <button class="copy-btn" onclick="copy('netSubject1')">Copy Subject 1</button>
+  </div>
+
+  <div class="field" style="margin-top: 15px;">
+    <strong>Subject Option 2:</strong>
+    <div class="text" id="netSubject2">Your second subject will appear here...</div>
+    <button class="copy-btn" onclick="copy('netSubject2')">Copy Subject 2</button>
+  </div>
+
+  <!-- Generated Email -->
+  <div class="field" style="margin-top: 15px;">
+    <strong>Email Body:</strong>
+    <pre class="text" id="netEmailResult" style="white-space: pre-wrap;">Your generated email will appear here...</pre>
+    <button class="copy-btn" onclick="copy('netEmailResult')">Copy Email</button>
+  </div>
+</div>
+
+<script>
+  function generateNetAppEmail() {
+    const company = document.getElementById("netCompany").value || "NetApp";
+    const position = document.getElementById("netPosition").value || "Software Engineer – Cloud Data Services";
+    const jobLink = document.getElementById("netJobLink").value || "Job Link";
+    const recruiter = document.getElementById("netRecruiter").value || "Recruiter";
+
+    // Collect selected skills
+    const selectedSkills = [];
+    document.querySelectorAll(".netSkill:checked").forEach(cb => {
+      selectedSkills.push(cb.value);
+    });
+    const skillsText = selectedSkills.length ? selectedSkills.join(", ") : "Relevant skills";
+
+    // Subject options
+    const subject1 = `Application for ${position} at ${company}`;
+    const subject2 = `Seeking Referral - ${position} at ${company}`;
+    document.getElementById("netSubject1").innerText = subject1;
+    document.getElementById("netSubject2").innerText = subject2;
+
+    // Email body
+    const email = 
+`Hi ${recruiter},
+
+I recently applied for the ${position} role at ${company} (Job Link: ${jobLink}) and am excited about the opportunity to contribute to innovative technology solutions and complex software systems. I wanted to briefly introduce myself:
+
+• Recent graduate with a Master’s in Computer Science, Santa Clara University  
+• 2.5+ years at Accenture developing Java-based REST APIs and backend systems  
+• 7-month internship at Caltrain in backend development and cybersecurity  
+• Skills: ${skillsText}  
+
+I have attached my resume for your reference and would be highly grateful for your support in moving my application forward, either through a referral or by ensuring it is in the system. I am actively interviewing and available to join immediately.
+
+Best regards,  
+Sawan Chakraborty  
+M: +1 (650) 663-8910`;
+
+    document.getElementById("netEmailResult").innerText = email;
+  }
+</script>
+
+
+
+
+<!-- Microsoft Application Email Generator -->
+<div class="card">
+  <h2>Application Email Generator</h2>
+
+  <!-- Input fields -->
+  <div class="field">
+    <label>Company Name:</label>
+    <input type="text" id="msCompany" placeholder="e.g., Microsoft">
+  </div>
+  
+  <div class="field">
+    <label>Team Name (optional):</label>
+    <input type="text" id="msTeam" placeholder="e.g., CoreAI">
+  </div>
+  
+  <div class="field">
+    <label>Job Position:</label>
+    <input type="text" id="msPosition" placeholder="e.g., Software Engineer II">
+  </div>
+  
+  <div class="field">
+    <label>Job Link:</label>
+    <input type="text" id="msJobLink" placeholder="Paste job link here">
+  </div>
+  
+  <div class="field">
+    <label>Recruiter Name:</label>
+    <input type="text" id="msRecruiter" placeholder="e.g., Neha">
+  </div>
+
+  <!-- Skills checkboxes -->
+  <div class="field">
+    <label>Select Key Skills (choose at least one):</label>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
+      <label><input type="checkbox" class="msSkill" value="Java"> Java</label>
+      <label><input type="checkbox" class="msSkill" value="Python"> Python</label>
+      <label><input type="checkbox" class="msSkill" value="REST APIs"> REST APIs</label>
+      <label><input type="checkbox" class="msSkill" value="Spring Boot"> Spring Boot</label>
+      <label><input type="checkbox" class="msSkill" value="SQL"> SQL</label>
+      <label><input type="checkbox" class="msSkill" value="Agile"> Agile</label>
+      <label><input type="checkbox" class="msSkill" value="Backend Development"> Backend Development</label>
+      <label><input type="checkbox" class="msSkill" value="Cybersecurity"> Cybersecurity</label>
+      <label><input type="checkbox" class="msSkill" value="Cloud"> Cloud</label>
+      <label><input type="checkbox" class="msSkill" value="DevOps"> DevOps</label>
+    </div>
+  </div>
+
+  <!-- Generate Button -->
+  <div style="text-align: center; margin-top: 15px;">
+    <button class="copy-btn" onclick="generateMicrosoftEmail()">Generate Email</button>
+  </div>
+
+  <!-- Generated Subjects -->
+  <div class="field" style="margin-top: 15px;">
+    <strong>Subject Option 1:</strong>
+    <div class="text" id="msSubject1">Your first subject will appear here...</div>
+    <button class="copy-btn" onclick="copy('msSubject1')">Copy Subject 1</button>
+  </div>
+
+  <div class="field" style="margin-top: 15px;">
+    <strong>Subject Option 2:</strong>
+    <div class="text" id="msSubject2">Your second subject will appear here...</div>
+    <button class="copy-btn" onclick="copy('msSubject2')">Copy Subject 2</button>
+  </div>
+
+  <!-- Generated Email -->
+  <div class="field" style="margin-top: 15px;">
+    <strong>Email Body:</strong>
+    <pre class="text" id="msEmailResult" style="white-space: pre-wrap;">Your generated email will appear here...</pre>
+    <button class="copy-btn" onclick="copy('msEmailResult')">Copy Email</button>
+  </div>
+</div>
+
+<script>
+  function generateMicrosoftEmail() {
+    const company = document.getElementById("msCompany").value || "Microsoft";
+    const team = document.getElementById("msTeam").value.trim();
+    const position = document.getElementById("msPosition").value || "Software Engineer II";
+    const jobLink = document.getElementById("msJobLink").value || "Job Link";
+    const recruiter = document.getElementById("msRecruiter").value || "Recruiter";
+
+    // Collect selected skills
+    const selectedSkills = [];
+    document.querySelectorAll(".msSkill:checked").forEach(cb => {
+      selectedSkills.push(cb.value);
+    });
+    const skillsText = selectedSkills.length ? selectedSkills.join(", ") : "Relevant skills";
+
+    // Subjects
+    const subject1 = `Application for ${position} at ${company}`;
+    const subject2 = `Seeking Referral - ${position} at ${company}`;
+    document.getElementById("msSubject1").innerText = subject1;
+    document.getElementById("msSubject2").innerText = subject2;
+
+    // Team name handling
+    const teamText = team ? ` in the ${company} ${team} team` : "";
+
+    // Email body with correct spacing
+    const email = 
+`Hi ${recruiter},
+
+I came across your post about the ${position} role${teamText} and was immediately excited about the opportunity to contribute to innovative technology solutions and complex software systems. I have applied for the role using the link you provided and believe my background aligns well with the requirements:
+
+• Recent graduate with a Master’s in Computer Science, Santa Clara University  
+• 2.5+ years at Accenture developing Java-based REST APIs and backend systems  
+• 7-month internship at Caltrain in backend development and cybersecurity  
+• Skills: ${skillsText}  
+
+I have attached my resume for your reference and would be highly grateful for your support in moving my application forward. I am actively interviewing, available to join immediately, and eager for the opportunity to contribute to ${company}${team ? "’s " + team + " projects" : ""}.
+
+Best regards,  
+Sawan C  
+M: +1 (650) 663-8910`;
+
+    document.getElementById("msEmailResult").innerText = email;
+  }
+</script>
+
+
+
 
 <div id="toast">Copied to clipboard</div>
 
