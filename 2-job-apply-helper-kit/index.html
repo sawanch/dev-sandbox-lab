@@ -242,7 +242,15 @@
 <!-- Technical Skills Section -->
 <div class="card">
   <h2>Technical Skills</h2>
+  
+  <!-- Select/Deselect Buttons -->
+  <div style="text-align: right; margin-bottom: 10px;">
+    <button class="copy-btn" onclick="selectAllSkills()">Select All</button>
+    <button class="copy-btn" onclick="deselectAllSkills()">Deselect All</button>
+  </div>
+
   <div id="skills-container"></div>
+  
   <div style="text-align: center; margin-top: 15px;">
     <button class="copy-btn" onclick="generateSkillParagraph()">Submit & Copy Selected Skills</button>
   </div>
@@ -254,108 +262,113 @@
 <!-- Resume Download Section -->
 <div class="card">
   <h2>Download My Resume</h2>
+  
   <div class="field">
-    <div class="text">sawanchakraborty100@gmail.com - backend resume</div>
-    <a href="https://raw.githubusercontent.com/sawanch/dev-sandbox-lab/main/2-job-apply-helper-kit/Sawan_C_Resume.pdf" target="_blank" download>
+    <div class="text">sawanchakraborty100-main Resume</div>
+    <a href="https://raw.githubusercontent.com/sawanch/dev-sandbox-lab/main/2-job-apply-helper-kit/Sawan_C_Backend_Resume.pdf" target="_blank" download>
+      <button class="copy-btn">Download Resume (PDF)</button>
+    </a>
+  </div>
+
+  <div class="field">
+    <div class="text">mail2sawanc-alt1 Resume</div>
+    <a href="https://raw.githubusercontent.com/sawanch/dev-sandbox-lab/main/2-job-apply-helper-kit/Sawan_C_FullStack_Resume.pdf" target="_blank" download>
+      <button class="copy-btn">Download Resume (PDF)</button>
+    </a>
+  </div>
+
+  <div class="field">
+    <div class="text">sawcha1105-alt2 Resume</div>
+    <a href="https://raw.githubusercontent.com/sawanch/dev-sandbox-lab/main/2-job-apply-helper-kit/Sawan_C_DataML_Resume.pdf" target="_blank" download>
       <button class="copy-btn">Download Resume (PDF)</button>
     </a>
   </div>
 </div>
-</div>
 
+<div id="toast">Copied to clipboard</div>
 
+<script>
+  function copy(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(showToast);
+  }
 
-
-
-  <div id="toast">Copied to clipboard</div>
-
-  <script>
-    function copy(id) {
-      const text = document.getElementById(id).innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        showToast();
-      });
+  function copyBullets(containerId) {
+    const container = document.getElementById(containerId);
+    const items = container.getElementsByTagName("li");
+    let bulletText = "";
+    for (let item of items) {
+      bulletText += "* " + item.innerText + "\n\n";
     }
+    navigator.clipboard.writeText(bulletText.trim()).then(showToast);
+  }
 
-    function copyBullets(containerId) {
-      const container = document.getElementById(containerId);
-      const items = container.getElementsByTagName("li");
-      let bulletText = "";
-      for (let item of items) {
-        bulletText += "* " + item.innerText + "\n\n";
-      }
-      navigator.clipboard.writeText(bulletText.trim()).then(() => {
-        showToast();
-      });
-    }
+  function showToast() {
+    const toast = document.getElementById("toast");
+    toast.className = "show";
+    setTimeout(() => {
+      toast.className = toast.className.replace("show", "");
+    }, 2000);
+  }
 
-    function showToast() {
-      const toast = document.getElementById("toast");
-      toast.className = "show";
-      setTimeout(() => {
-        toast.className = toast.className.replace("show", "");
-      }, 2000);
-    }
+  // Skills grouped by categories
+  const groupedSkills = {
+    "Backend": ["Java", "Python", "C", "C++", "Spring", "SOAP & REST APIs", "Maven"],
+    "Frontend": ["HTML", "CSS", "JavaScript", "Bootstrap", "Angular", "High Charts"],
+    "DevOps": ["Kubernetes", "Docker", "Jenkins", "Git", "Linux", "AWS", "Apache Tomcat"],
+    "Testing": ["JUnit", "Mockito", "Selenium"],
+    "ML/AI": ["Hadoop", "Kafka"],
+    "Database": ["MySQL", "SQLite", "MongoDB"],
+    "Cybersecurity": ["Splunk"]
+  };
 
+  const container = document.getElementById("skills-container");
 
-    function copyTodayDate() {
-      const today = new Date();
-      const formatted = (today.getMonth() + 1).toString().padStart(2, '0') + '/' +
-                    today.getDate().toString().padStart(2, '0') + '/' +
-                    today.getFullYear();
-      document.getElementById('todayDate').innerText = formatted;
-      navigator.clipboard.writeText(formatted).then(() => {
-      showToast();
-  });
-}
-
-
-
-
-    const skills = [
-      "Java", "Python", "C", "C++", "HTML", "CSS", "JavaScript", "Bootstrap", "Angular",
-      "SOAP & REST APIs", "High Charts", "JSON", "Spring", "JUnit", "Mockito", "Android",
-      "Hadoop", "Kafka", "Selenium", "Kubernetes", "Docker", "Maven", "Git", "Jenkins",
-      "AWS", "Linux", "Splunk", "Apache Tomcat", "MySQL", "SQLite", "MongoDB"
-];
-
-    const container = document.getElementById("skills-container");
-
-    skills.forEach((skill, index) => {
+  // Render grouped skills
+  Object.keys(groupedSkills).forEach(group => {
+    const groupDiv = document.createElement("div");
+    groupDiv.className = "skill-group";
+    groupDiv.innerHTML = `<h3>${group}</h3>`;
+    groupedSkills[group].forEach((skill, index) => {
       const field = document.createElement("div");
       field.className = "field";
       field.innerHTML = `
         <label>
-          <input type="checkbox" id="skillToggle${index}" style="margin-right: 10px;">
+          <input type="checkbox" class="skillCheckbox" value="${skill}" style="margin-right: 10px;">
           ${skill}
         </label>
         <button class="copy-btn" style="margin-left: auto;" onclick="copySkill('${skill}')">Copy</button>
       `;
-      container.appendChild(field);
-});
-
-    function copySkill(skill) {
-      navigator.clipboard.writeText(skill).then(() => {
-        showToast();
+      groupDiv.appendChild(field);
+    });
+    container.appendChild(groupDiv);
   });
-}
 
-    function generateSkillParagraph() {
-      const selectedSkills = [];
-      skills.forEach((skill, index) => {
-        if (document.getElementById(`skillToggle${index}`).checked) {
-          selectedSkills.push(skill);
-        }
-  });
+  function copySkill(skill) {
+    navigator.clipboard.writeText(skill).then(showToast);
+  }
+
+  function generateSkillParagraph() {
+    const selectedSkills = [];
+    document.querySelectorAll(".skillCheckbox").forEach(cb => {
+      if (cb.checked) selectedSkills.push(cb.value);
+    });
     const paragraph = selectedSkills.join(', ');
     document.getElementById('skillsResult').innerText = paragraph;
-    navigator.clipboard.writeText(paragraph).then(() => {
-      showToast();
-  });
-}
+    navigator.clipboard.writeText(paragraph).then(showToast);
+  }
 
+  function selectAllSkills() {
+    document.querySelectorAll(".skillCheckbox").forEach(cb => cb.checked = true);
+    generateSkillParagraph();
+  }
 
-  </script>
+  function deselectAllSkills() {
+    document.querySelectorAll(".skillCheckbox").forEach(cb => cb.checked = false);
+    document.getElementById('skillsResult').innerText = "Your selected skills will appear here...";
+  }
+</script>
+
 
 
   <style>
