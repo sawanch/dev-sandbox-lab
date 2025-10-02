@@ -314,7 +314,7 @@
 
 <!-- Referral Email Generator -->
 <div class="card">
-  <h2>Referral Email Generator</h2>
+  <h2>Referral Email with Job Id and Link </h2>
 
   <!-- Input fields -->
   <div class="field">
@@ -433,7 +433,7 @@ M: +1 (650) 663-8910`;
 
 <!-- NetApp Referral Email Generator -->
 <div class="card">
-  <h2>Referral Email Generator (NetApp)</h2>
+  <h2>Referral Email with only Job Link</h2>
 
   <!-- Input fields -->
   <div class="field">
@@ -545,7 +545,7 @@ M: +1 (650) 663-8910`;
 
 <!-- Microsoft Application Email Generator -->
 <div class="card">
-  <h2>Application Email Generator</h2>
+  <h2>Linkedin Post Email</h2>
 
   <!-- Input fields -->
   <div class="field">
@@ -662,6 +662,46 @@ M: +1 (650) 663-8910`;
 </script>
 
 
+<!-- LinkedIn Connection Request Generator -->
+<div class="card">
+  <h2>LinkedIn Connection Request Generator</h2>
+
+  <!-- Input field -->
+  <div class="field">
+    <label>Person's Name (optional):</label>
+    <input type="text" id="liName" placeholder="e.g., John">
+  </div>
+
+  <!-- Generate Button -->
+  <div style="text-align: center; margin-top: 15px;">
+    <button class="copy-btn" onclick="generateLinkedInMessage()">Generate Message</button>
+  </div>
+
+  <!-- Generated Message -->
+  <div class="field" style="margin-top: 15px;">
+    <strong>Message:</strong>
+    <pre class="text" id="liMessageResult" style="white-space: pre-wrap;">Your generated message will appear here...</pre>
+    <button class="copy-btn" onclick="copy('liMessageResult')">Copy Message</button>
+  </div>
+</div>
+
+<script>
+  function generateLinkedInMessage() {
+    const name = document.getElementById("liName").value.trim();
+
+    const greeting = name ? `Hi ${name},` : "Hi,";
+
+    const message =
+`${greeting}
+
+I’m Sawan, a recent MS CS graduate with 2.5 years of experience in software development. I’m eager to learn from your experience and would value the chance to connect, gain insights from your journey, and explore opportunities to apply my skills to impactful projects.
+
+Regards,
+Sawan`;
+
+    document.getElementById("liMessageResult").innerText = message;
+  }
+</script>
 
 
 <div id="toast">Copied to clipboard</div>
