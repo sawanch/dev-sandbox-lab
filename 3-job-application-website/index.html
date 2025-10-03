@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Portals</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Job Portals</h1>
+
+  <!-- Single Card with Job Portals -->
+  <div class="card">
+    <h2>Quick Access Job Portals</h2>
+    <div class="field">
+      <div class="text">LinkedIn Jobs</div>
+      <a href="https://www.linkedin.com/jobs/" target="_blank">
+        <button class="copy-btn">Go</button>
+      </a>
+    </div>
+    <div class="field">
+      <div class="text">JobRite AI</div>
+      <a href="https://jobrite.ai" target="_blank">
+        <button class="copy-btn">Go</button>
+      </a>
+    </div>
+    <div class="field">
+      <div class="text">Levels.fyi</div>
+      <a href="https://www.levels.fyi/jobs" target="_blank">
+        <button class="copy-btn">Go</button>
+      </a>
+    </div>
+    <div class="field">
+      <div class="text">Indeed</div>
+      <a href="https://www.indeed.com" target="_blank">
+        <button class="copy-btn">Go</button>
+      </a>
+    </div>
+    <div class="field">
+      <div class="text">Simplify</div>
+      <a href="https://simplify.jobs" target="_blank">
+        <button class="copy-btn">Go</button>
+      </a>
+    </div>
+    <div class="field">
+      <div class="text">Glassdoor</div>
+      <a href="https://www.glassdoor.com/Job/index.htm" target="_blank">
+        <button class="copy-btn">Go</button>
+      </a>
+    </div>
+    <div class="field">
+      <div class="text">Monster</div>
+      <a href="https://www.monster.com" target="_blank">
+        <button class="copy-btn">Go</button>
+      </a>
+    </div>
+    <div class="field">
+      <div class="text">ZipRecruiter</div>
+      <a href="https://www.ziprecruiter.com" target="_blank">
+        <button class="copy-btn">Go</button>
+      </a>
+    </div>
+    <div class="field">
+      <div class="text">Hired</div>
+      <a href="https://hired.com" target="_blank">
+        <button class="copy-btn">Go</button>
+      </a>
+    </div>
+    <div class="field">
+      <div class="text">Wellfound (AngelList Talent)</div>
+      <a href="https://wellfound.com/jobs" target="_blank">
+        <button class="copy-btn">Go</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar toggle + index -->
+  <div id="toggleSidebar">☰</div>
+  <div id="sidebar" class="collapsed">
+    <h3>Sections</h3>
+    <ul id="sectionList"></ul>
+  </div>
+
+  <script>
+    // Build sidebar index from all <h2> inside .card
+    const sectionList = document.getElementById('sectionList');
+    const headings = document.querySelectorAll('.card h2');
+
+    headings.forEach((heading, index) => {
+      const id = `section-${index}`;
+      heading.id = id;
+
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="#${id}">${heading.innerText}</a>`;
+      sectionList.appendChild(li);
+    });
+
+    // Toggle sidebar
+    const sidebar = document.getElementById('sidebar');
+    const toggleButton = document.getElementById('toggleSidebar');
+    toggleButton.onclick = () => {
+      sidebar.classList.toggle('collapsed');
+    };
+  </script>
+
+</body>
+</html>

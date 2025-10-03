@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Header */
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* MAIN CONTAINER */
+  #main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-left: 380px; /* To account for sidebar */
+    margin-right: 20px;
+  }
+  
+  /* CARDS */
+  .card {
+    background: #90e8cf;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%;
+    max-width: 45%;
+    min-width: 350px;
+  }
+  
+  /* FIELDS */
+  .field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    margin: 6px 0;
+    padding: 6px 8px;                     /* small padding inside the row */
+    background-color: #f0f8ff;           /* very light blue */
+    border-radius: 4px;                  /* slight rounding for aesthetics */
+  }
+  
+  .text {
+    flex: 1;
+    padding-right: 10px;
+    word-wrap: break-word;
+  }
+  
+  /* BUTTONS */
+  .copy-btn{
+    padding: 8px 20px;        /* Increase padding for size */
+   /*  min-width: 500px;         Set a wider base width */
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto;
+    min-width: auto;  /* Reset any previously set minimum width */
+  max-width: 120px; /* Optional: restrict max width */
+  }
+
+  .bullet-copy-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;         /* allow natural width */
+    min-width: unset;    /* remove the shared min-width */
+  }
+  
+  
+  .copy-btn:hover,
+  .bullet-copy-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* BULLET BOX */
+  .bullet-box {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 4px solid #007bff;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .bullet-box ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .bullet-copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  /* TOAST */
+  #toast {
+    visibility: hidden;
+    min-width: 200px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 12px;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    font-size: 16px;
+  }
+  #toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 1.5s;
+  }
+  
+  @keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 20px; opacity: 1;}
+  }
+  @keyframes fadeout {
+    from {top: 20px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
+  
+  /* SIDEBAR */
+  #sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 360px;
+    background-color: rgba(255, 255, 255, 0.01); /* Ultra-light white */
+    border-right: 1px solid rgba(255, 255, 255, 0.05); /* Soft border */
+    padding: 15px;
+    height: 90%;
+    overflow-y: auto;
+    box-shadow: none; /* Remove drop shadow */
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(7px); /* Minimized blur */
+  }
+  
+  
+  #sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+  
+  #sidebar h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  #sidebar ul {
+    counter-reset: section-counter;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  #sidebar ul li::before {
+    counter-increment: section-counter;
+    content: counter(section-counter) ". ";
+    font-size: 20px;           /* Match sidebar link font */
+    font-weight: bold;         /* Match bold style */
+    color: #0041ec;            /* Same blue color as links */
+    text-transform: uppercase; /* Match uppercase text */
+  }
+  
+  
+  
+  #sidebar ul li {
+    margin: 10px 0;
+  }
+  
+  #sidebar ul li a {
+    text-decoration: none;
+    color: #0041ec;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  
+  
+  /* TOGGLE BUTTON */
+  #toggleSidebar {
+    position: fixed;
+    left: 0;
+    top: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 6px 10px;
+    cursor: pointer;
+    z-index: 1100;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+  }
+  
+  /* RESPONSIVENESS */
+  @media screen and (max-width: 768px) {
+    #main {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .card {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+  
+    #sidebar {
+      width: 250px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .copy-btn {
+      min-width: 200px; /* Wider buttons on desktop screens */
+    }
+  }
+  
+  
