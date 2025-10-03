@@ -704,6 +704,186 @@ Sawan`;
 </script>
 
 
+
+<style>
+  .message-block {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fafafa;
+  }
+  .message-block pre {
+    white-space: pre-wrap;
+    margin: 0;
+  }
+</style>
+
+<!-- LinkedIn / Outreach Message Generator - Card 1 -->
+<div class="card">
+  <h2>Message Generator (Set 1)</h2>
+
+  <!-- Inputs -->
+  <div class="field">
+    <label>Recipient Name:</label>
+    <input type="text" id="msg1Name" placeholder="e.g., John">
+  </div>
+  <div class="field">
+    <label>Company Name (optional):</label>
+    <input type="text" id="msg1Company" placeholder="e.g., Google">
+  </div>
+  <div class="field">
+    <label>Email (optional):</label>
+    <input type="text" id="msg1Email" placeholder="e.g., user@email.com">
+  </div>
+  <div class="field">
+    <label>GitHub (optional):</label>
+    <input type="text" id="msg1GitHub" placeholder="e.g., https://github.com/sawanch">
+  </div>
+  <div class="field">
+    <label>Resume Link (optional):</label>
+    <input type="text" id="msg1Resume" placeholder="e.g., Google Drive Resume Link">
+  </div>
+
+  <!-- Generate Button -->
+  <div style="text-align: center; margin-top: 10px;">
+    <button class="copy-btn" onclick="generateMsgSet1()">Generate Messages</button>
+  </div>
+
+  <!-- Generated Messages -->
+  <div class="message-block">
+    <strong>Message 1:</strong>
+    <pre class="text" id="msg1Result1">Your message will appear here...</pre>
+    <button class="copy-btn" onclick="copy('msg1Result1')">Copy</button>
+  </div>
+
+  <div class="message-block">
+    <strong>Message 2:</strong>
+    <pre class="text" id="msg1Result2">Your message will appear here...</pre>
+    <button class="copy-btn" onclick="copy('msg1Result2')">Copy</button>
+  </div>
+
+  <div class="message-block">
+    <strong>Message 3:</strong>
+    <pre class="text" id="msg1Result3">Your message will appear here...</pre>
+    <button class="copy-btn" onclick="copy('msg1Result3')">Copy</button>
+  </div>
+</div>
+
+<script>
+  function generateMsgSet1() {
+    const name = document.getElementById("msg1Name").value || "Hi";
+    const company = document.getElementById("msg1Company").value || "{Company Name}";
+    const email = document.getElementById("msg1Email").value || "";
+    const github = document.getElementById("msg1GitHub").value || "";
+    const resume = document.getElementById("msg1Resume").value || "";
+
+    document.getElementById("msg1Result1").innerText = 
+`${name},
+Thank you for sharing this opportunity! With 2.5+ years of experience in Software Engineering, I’m excited about the possibility of contributing to your team. I’ve sent you a DM and would love to connect to discuss the role further. Looking forward to the opportunity!
+
+Email: ${email}
+Github: ${github}
+Resume: ${resume}`;
+
+    document.getElementById("msg1Result2").innerText = 
+`${name},
+Thank you for sharing this opportunity. I have applied for the position.
+
+A bit about me — I hold an MS in Computer Science from Santa Clara University and bring 2.5 years of expertise in full-stack development, distributed systems, API programming, and AI-driven applications using Java, Python, JavaScript, React, PostgreSQL, and AWS. While continuously exploring new tools and frameworks, I would love the chance to work with the amazing teams at ${company}.`;
+
+    document.getElementById("msg1Result3").innerText = 
+`${name},
+Thank you for sharing these opportunities at ${company}.
+
+I am an experienced software engineer with a Master’s in Computer Science from Santa Clara University, CA. I am very interested in and well qualified for the Software Engineer, AI Data role and would love the chance to connect with you to learn more about it.
+
+Thank you!`;
+  }
+</script>
+
+
+
+
+<!-- LinkedIn / Outreach Message Generator - Card 2 -->
+<div class="card">
+  <h2>Message Generator (Set 2)</h2>
+
+  <!-- Inputs -->
+  <div class="field">
+    <label>Recipient Name:</label>
+    <input type="text" id="msg2Name" placeholder="e.g., Sarah">
+  </div>
+  <div class="field">
+    <label>Resume Link (optional):</label>
+    <input type="text" id="msg2Resume" placeholder="e.g., Google Drive Resume Link">
+  </div>
+  <div class="field">
+    <label>Company Name (optional):</label>
+    <input type="text" id="msg2Company" placeholder="e.g., Amazon">
+  </div>
+
+  <!-- Generate Button -->
+  <div style="text-align: center; margin-top: 10px;">
+    <button class="copy-btn" onclick="generateMsgSet2()">Generate Messages</button>
+  </div>
+
+  <!-- Generated Messages -->
+  <div class="message-block">
+    <strong>Message 4:</strong>
+    <pre class="text" id="msg2Result1">Your message will appear here...</pre>
+    <button class="copy-btn" onclick="copy('msg2Result1')">Copy</button>
+  </div>
+
+  <div class="message-block">
+    <strong>Message 5:</strong>
+    <pre class="text" id="msg2Result2">Your message will appear here...</pre>
+    <button class="copy-btn" onclick="copy('msg2Result2')">Copy</button>
+  </div>
+
+  <div class="message-block">
+    <strong>Message 6:</strong>
+    <pre class="text" id="msg2Result3">Your message will appear here...</pre>
+    <button class="copy-btn" onclick="copy('msg2Result3')">Copy</button>
+  </div>
+</div>
+
+<script>
+  function generateMsgSet2() {
+    const name = document.getElementById("msg2Name").value || "Hi";
+    const resume = document.getElementById("msg2Resume").value || "[Insert Google Drive Link Here]";
+    const company = document.getElementById("msg2Company").value || "{Company Name}";
+
+    document.getElementById("msg2Result1").innerText = 
+`${name},
+I am very interested in this role and would greatly appreciate the opportunity to connect and discuss it further. Please find my resume attached for your reference.
+
+Resume: ${resume}
+
+Thank you!`;
+
+    document.getElementById("msg2Result2").innerText = 
+`${name},
+I am very interested in this role. I bring 2.5 years of experience with Accenture and Frugal Innovation Hub, along with a Master’s in Computer Science from Santa Clara University. I have strong full-stack development experience across both roles and would love the opportunity to contribute.
+
+Resume: ${resume}
+
+Thank you!`;
+
+    document.getElementById("msg2Result3").innerText = 
+`${name},
+Thank you for sharing this opportunity. With over three years of experience building highly scalable distributed systems, I believe I would be an excellent fit for this role. I have already submitted my application and look forward to connecting with you to discuss the position further.
+
+Resume: ${resume}
+
+Thank you!`;
+  }
+</script>
+
+
+
+
+
 <div id="toast">Copied to clipboard</div>
 
 <script>
