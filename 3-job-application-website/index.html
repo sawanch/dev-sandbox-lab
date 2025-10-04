@@ -3,76 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Job Portals</title>
+  <title>Job Portals & Events</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Add this to your style.css instead if you want */
+    .card-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .card {
+      flex: 1 1 45%; /* each card ~45% width */
+      min-width: 300px; /* don’t shrink too small */
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .field {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8px 0;
+    }
+    .copy-btn {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Job Portals</h1>
+  <h1>Job Portals & Events</h1>
 
-  <!-- Single Card with Job Portals -->
-  <div class="card">
-    <h2>Quick Access Job Portals</h2>
-    <div class="field">
-      <div class="text">LinkedIn Jobs</div>
-      <a href="https://www.linkedin.com/jobs/" target="_blank">
-        <button class="copy-btn">Go</button>
-      </a>
+  <!-- Row with 2 cards -->
+  <div class="card-row">
+
+    <!-- Card 1: Job Portals -->
+    <div class="card">
+      <h2>Quick Access Job Portals</h2>
+      <div class="field"><div class="text">LinkedIn Jobs</div><a href="https://www.linkedin.com/jobs/search/?currentJobId=4295410922&distance=25.0&f_E=2&f_TPR=r7200&geoId=103644278&keywords=Software%20Engineer%20New%20Grad&origin=JOBS_HOME_KEYWORD_HISTORY" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">JobRight</div><a href="https://jobright.ai/jobs/recommend" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">Levels.fyi</div><a href="https://www.levels.fyi/jobs" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">Indeed</div><a href="https://www.indeed.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">Simplify</div><a href="https://simplify.jobs" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">Glassdoor</div><a href="https://www.glassdoor.com/Job/index.htm" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">Monster</div><a href="https://www.monster.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">ZipRecruiter</div><a href="https://www.ziprecruiter.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">Hired</div><a href="https://hired.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">Wellfound (AngelList Talent)</div><a href="https://wellfound.com/jobs" target="_blank"><button class="copy-btn">Go</button></a></div>
     </div>
-    <div class="field">
-      <div class="text">JobRite AI</div>
-      <a href="https://jobrite.ai" target="_blank">
-        <button class="copy-btn">Go</button>
-      </a>
+
+    <!-- Card 2: Events & Hackathons -->
+    <div class="card">
+      <h2>Events & Hackathons</h2>
+      <div class="field"><div class="text">Devpost</div><a href="https://devpost.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">MLH (Major League Hacking)</div><a href="https://mlh.io" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">Hackathon.com</div><a href="https://www.hackathon.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">Eventbrite Tech Events</div><a href="https://www.eventbrite.com/d/online/tech--events/" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">IEEE Events</div><a href="https://www.ieee.org/conferences/index.html" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">ACM Conferences</div><a href="https://www.acm.org/conferences" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">TechCrunch Events</div><a href="https://techcrunch.com/events/" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">Meetup Tech</div><a href="https://www.meetup.com/topics/tech/" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">AngelHack</div><a href="https://angelhack.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <div class="field"><div class="text">HackClub</div><a href="https://hackclub.com" target="_blank"><button class="copy-btn">Go</button></a></div>
     </div>
-    <div class="field">
-      <div class="text">Levels.fyi</div>
-      <a href="https://www.levels.fyi/jobs" target="_blank">
-        <button class="copy-btn">Go</button>
-      </a>
-    </div>
-    <div class="field">
-      <div class="text">Indeed</div>
-      <a href="https://www.indeed.com" target="_blank">
-        <button class="copy-btn">Go</button>
-      </a>
-    </div>
-    <div class="field">
-      <div class="text">Simplify</div>
-      <a href="https://simplify.jobs" target="_blank">
-        <button class="copy-btn">Go</button>
-      </a>
-    </div>
-    <div class="field">
-      <div class="text">Glassdoor</div>
-      <a href="https://www.glassdoor.com/Job/index.htm" target="_blank">
-        <button class="copy-btn">Go</button>
-      </a>
-    </div>
-    <div class="field">
-      <div class="text">Monster</div>
-      <a href="https://www.monster.com" target="_blank">
-        <button class="copy-btn">Go</button>
-      </a>
-    </div>
-    <div class="field">
-      <div class="text">ZipRecruiter</div>
-      <a href="https://www.ziprecruiter.com" target="_blank">
-        <button class="copy-btn">Go</button>
-      </a>
-    </div>
-    <div class="field">
-      <div class="text">Hired</div>
-      <a href="https://hired.com" target="_blank">
-        <button class="copy-btn">Go</button>
-      </a>
-    </div>
-    <div class="field">
-      <div class="text">Wellfound (AngelList Talent)</div>
-      <a href="https://wellfound.com/jobs" target="_blank">
-        <button class="copy-btn">Go</button>
-      </a>
-    </div>
+
   </div>
 
   <!-- Sidebar toggle + index -->
