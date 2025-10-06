@@ -172,13 +172,13 @@ body {
     padding-left: 0;
   }
 
-  #sidebar ul li::before {
+  /* #sidebar ul li::before {
     counter-increment: section-counter;
     content: counter(section-counter) ". ";
-    font-size: 20px;           /* Match sidebar link font */
-    font-weight: bold;         /* Match bold style */
-    color: #0041ec;            /* Same blue color as links */
-    text-transform: uppercase; /* Match uppercase text */
+    font-size: 20px;           
+    font-weight: bold;         
+    color: #0041ec;            
+    text-transform: uppercase;
   }
   
   
@@ -193,9 +193,142 @@ body {
     font-weight: bold;
     font-size: 20px;
     text-transform: uppercase;
-  }
+  } */
 
-  
+  /* ==============================
+   SIDEBAR SECTION COLORS (SAFE)
+   ============================== */
+
+/* Keep all your sidebar defaults intact */
+#sidebar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 360px;
+  background-color: rgba(255, 255, 255, 0.01);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  height: 90%;
+  overflow-y: auto;
+  box-shadow: none;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(7px);
+}
+
+#sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+#sidebar h3 {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#sidebar ul {
+  counter-reset: section-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+#sidebar ul li {
+  margin: 10px 0;
+}
+
+#sidebar ul li::before {
+  counter-increment: section-counter;
+  content: counter(section-counter) ". ";
+  font-size: 20px;
+  font-weight: bold;
+  color: #0041ec; /* Default number color */
+  text-transform: uppercase;
+}
+
+#sidebar ul li a {
+  text-decoration: none;
+  color: #0041ec; /* Default text color */
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* ==============================
+   Custom Colors for Each Section
+   ============================== */
+
+/* 1 */
+#sidebar ul li:nth-child(1)::before,
+#sidebar ul li:nth-child(1) a { color: #3753E6; }
+
+/* 2 */
+#sidebar ul li:nth-child(2)::before,
+#sidebar ul li:nth-child(2) a { color: #BA0615; }
+
+/* 3 */
+#sidebar ul li:nth-child(3)::before,
+#sidebar ul li:nth-child(3) a { color: #00A84B; }
+
+/* 4 */
+#sidebar ul li:nth-child(4)::before,
+#sidebar ul li:nth-child(4) a { color: #F00202; }
+
+/* 5 */
+#sidebar ul li:nth-child(5)::before,
+#sidebar ul li:nth-child(5) a { color: #FF05D5; }
+
+/* 6 */
+#sidebar ul li:nth-child(6)::before,
+#sidebar ul li:nth-child(6) a { color: #9B42FF; }
+
+/* 7 */
+#sidebar ul li:nth-child(7)::before,
+#sidebar ul li:nth-child(7) a { color: #58C949; }
+
+/* 8 */
+#sidebar ul li:nth-child(8)::before,
+#sidebar ul li:nth-child(8) a { color: #F00202; }
+
+/* 9 */
+#sidebar ul li:nth-child(9)::before,
+#sidebar ul li:nth-child(9) a { color: #09B3DB; }
+
+/* 10 */
+#sidebar ul li:nth-child(10)::before,
+#sidebar ul li:nth-child(10) a { color: #120D00; }
+
+/* 11 */
+#sidebar ul li:nth-child(11)::before,
+#sidebar ul li:nth-child(11) a { color: #2980b9; }
+
+/* 12 */
+#sidebar ul li:nth-child(12)::before,
+#sidebar ul li:nth-child(12) a { color: #8e44ad; }
+
+/* 13 */
+#sidebar ul li:nth-child(13)::before,
+#sidebar ul li:nth-child(13) a { color: #EDB600; }
+
+/* 14 */
+#sidebar ul li:nth-child(14)::before,
+#sidebar ul li:nth-child(14) a { color: #EDB600; }
+
+/* 15 */
+#sidebar ul li:nth-child(15)::before,
+#sidebar ul li:nth-child(15) a { color: #0576FF; }
+
+/* 16 */
+#sidebar ul li:nth-child(16)::before,
+#sidebar ul li:nth-child(16) a { color: #0576FF; }
+
+/* 17 */
+#sidebar ul li:nth-child(17)::before,
+#sidebar ul li:nth-child(17) a { color: #0576FF; }
+
+/* 18 */
+#sidebar ul li:nth-child(18)::before,
+#sidebar ul li:nth-child(18) a { color: #0576FF; }
+
   
   /* TOGGLE BUTTON */
   #toggleSidebar {

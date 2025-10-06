@@ -33,11 +33,11 @@
 
     <!-- Contact & Emails -->
     <div class="field"><div class="text" id="per12">sawanchakraborty100@gmail.com</div><button class="copy-btn" onclick="copy('per12')">Copy</button></div>
-    <div class="field"><div class="text" id="per13">(650) 663-8910</div><button class="copy-btn" onclick="copy('per13')">Copy</button></div>
+    <div class="field"><div class="text" id="per13">650-663-8910</div><button class="copy-btn" onclick="copy('per13')">Copy</button></div>
     <div class="field"><div class="text" id="per14">mail2sawanc@gmail.com</div><button class="copy-btn" onclick="copy('per14')">Copy</button></div>
-    <div class="field"><div class="text" id="per15">(408) 462-2250</div><button class="copy-btn" onclick="copy('per15')">Copy</button></div>
+    <div class="field"><div class="text" id="per15">408-462-2250</div><button class="copy-btn" onclick="copy('per15')">Copy</button></div>
     <div class="field"><div class="text" id="per16">sawcha1105@gmail.com</div><button class="copy-btn" onclick="copy('per16')">Copy</button></div>
-    <div class="field"><div class="text" id="per17">(669) 226-8385</div><button class="copy-btn" onclick="copy('per17')">Copy</button></div>
+    <div class="field"><div class="text" id="per17">669-226-8385</div><button class="copy-btn" onclick="copy('per17')">Copy</button></div>
   </div>
 
 
@@ -880,7 +880,194 @@ Thank you!`;
   }
 </script>
 
+<!-- Cricket Referral Message Generator - Card 2 -->
+<div class="card">
+  <h2>Cricket Referral WhatsApp Message</h2>
 
+  <!-- Inputs -->
+  <div class="field">
+    <label>Recipient Name:</label>
+    <input type="text" id="cricName" placeholder="e.g., Rahul Bhai">
+  </div>
+  <div class="field">
+    <label>Company Name:</label>
+    <input type="text" id="cricCompany" placeholder="e.g., HPE">
+  </div>
+  <div class="field">
+    <label>Job Position:</label>
+    <input type="text" id="cricJob" placeholder="e.g., Cloud Engineer Graduate">
+  </div>
+  <div class="field">
+    <label>Job ID:</label>
+    <input type="text" id="cricJobId" placeholder="e.g., 1192968">
+  </div>
+  <div class="field">
+    <label>Your Email:</label>
+    <input type="text" id="cricEmail" placeholder="e.g., sawanchakraborty100@gmail.com">
+  </div>
+
+  <!-- Generate Button -->
+  <div style="text-align: center; margin-top: 10px;">
+    <button class="copy-btn" onclick="generateCricketMsg()">Generate Message</button>
+  </div>
+
+  <!-- Generated Message -->
+  <div class="message-block">
+    <strong>Generated WhatsApp Message:</strong>
+    <pre class="text" id="cricResult">Your message will appear here...</pre>
+    <button class="copy-btn" onclick="copy('cricResult')">Copy</button>
+  </div>
+</div>
+
+<!-- Cricket Referral Script -->
+<script>
+  function generateCricketMsg() {
+    const name = document.getElementById("cricName").value || "Rahul Bhai";
+    const company = document.getElementById("cricCompany").value || "the company";
+    const job = document.getElementById("cricJob").value || "Software Engineer";
+    const jobId = document.getElementById("cricJobId").value || "N/A";
+    const email = document.getElementById("cricEmail").value || "your@email.com";
+
+    const message = 
+`${name},
+
+Sorry to bother you. My name is Sawan Chakraborty — a recent CS graduate from Santa Clara University. I’ve seen you a few times on the cricket ground.
+
+I came across a ${job} position at ${company} that strongly aligns with my profile and career interests. I wanted to kindly ask if it would be possible for you to refer me for the role. I’d be really grateful for your help.
+
+I’ve attached my resume below for your reference.
+
+Job Position: ${job}
+Job ID: ${jobId}
+Email: ${email}`;
+
+    document.getElementById("cricResult").innerText = message;
+  }
+</script>
+
+
+
+<!-- Google Referral Email Message Generator - Card 3 -->
+<div class="card">
+  <h2>Google Referral Email Message</h2>
+
+  <!-- Inputs -->
+  <div class="field">
+    <label>Recipient Name:</label>
+    <input type="text" id="googleName" placeholder="e.g., Ashwin Bhai">
+  </div>
+  <div class="field">
+    <label>Company Name:</label>
+    <input type="text" id="googleCompany" placeholder="e.g., Google">
+  </div>
+
+  <!-- Container for Job Fields -->
+  <div id="jobContainer">
+    <div class="job-entry">
+      <div class="field">
+        <label>Job Position:</label>
+        <input type="text" class="jobTitle" placeholder="e.g., Software Engineer">
+      </div>
+      <div class="field">
+        <label>Job ID:</label>
+        <input type="text" class="jobId" placeholder="e.g., 1234567">
+      </div>
+      <div class="field">
+        <label>Job Link (optional):</label>
+        <input type="text" class="jobLink" placeholder="e.g., https://careers.google.com/jobs/results/...">
+      </div>
+    </div>
+  </div>
+
+  <!-- Add More Job Button -->
+  <div style="text-align: center; margin-top: 5px;">
+    <button class="copy-btn" style="background-color: #28a745;" onclick="addJobField()">➕ Add Another Position</button>
+  </div>
+
+  <!-- Generate Button -->
+  <div style="text-align: center; margin-top: 10px;">
+    <button class="copy-btn" onclick="generateGoogleMsg()">Generate Message</button>
+  </div>
+
+  <!-- ✅ Separate Subject Field -->
+  <div class="field" style="margin-top: 15px;">
+    <strong>Email Subject:</strong>
+    <div class="text" id="googleSubject">Your subject will appear here...</div>
+    <button class="copy-btn" onclick="copy('googleSubject')">Copy Subject</button>
+  </div>
+
+  <!-- Generated Message -->
+  <div class="message-block">
+    <strong>Generated Email Message:</strong>
+    <pre class="text" id="googleResult">Your message will appear here...</pre>
+    <button class="copy-btn" onclick="copy('googleResult')">Copy</button>
+  </div>
+</div>
+
+<!-- Google Referral Script -->
+<script>
+  function addJobField() {
+    const jobContainer = document.getElementById("jobContainer");
+    const newJob = document.createElement("div");
+    newJob.classList.add("job-entry");
+    newJob.innerHTML = `
+      <div class="field">
+        <label>Job Position:</label>
+        <input type="text" class="jobTitle" placeholder="e.g., Software Engineer">
+      </div>
+      <div class="field">
+        <label>Job ID:</label>
+        <input type="text" class="jobId" placeholder="e.g., 1234567">
+      </div>
+      <div class="field">
+        <label>Job Link (optional):</label>
+        <input type="text" class="jobLink" placeholder="e.g., https://careers.google.com/jobs/results/...">
+      </div>
+    `;
+    jobContainer.appendChild(newJob);
+  }
+
+  function generateGoogleMsg() {
+    const name = document.getElementById("googleName").value || "Ashwin Bhai";
+    const company = document.getElementById("googleCompany").value || "Google";
+
+    const titles = document.querySelectorAll(".jobTitle");
+    const ids = document.querySelectorAll(".jobId");
+    const links = document.querySelectorAll(".jobLink");
+
+    // Build bullet list
+    let jobDetails = "";
+    for (let i = 0; i < titles.length; i++) {
+      const title = titles[i].value || "Software Engineer";
+      const id = ids[i].value || "N/A";
+      const link = links[i].value || "";
+      jobDetails += `• Position: ${title}\n  Job ID: ${id}${link ? `\n  Link: ${link}` : ""}\n\n`;
+    }
+
+    // ✅ Create and display the subject separately
+    const subject = `Referral Request – Positions at ${company}`;
+    document.getElementById("googleSubject").innerText = subject;
+
+    // Email message body
+    const message = 
+`Hi ${name},
+I hope you're doing well! I'm reaching out to see if you'd be open to referring me for some positions at ${company} that align well with my background.
+
+I've attached my resume for your review, and I've included the role details below. A referral from you would be incredibly valuable and I'd be really grateful for your help! 🙏
+
+${jobDetails.trim()}
+
+If you need any additional information, please let me know. Thanks so much for considering this!
+
+Best regards,
+Sawan Chakraborty
+sawanchakraborty100@gmail.com
++1 (650) 663-8910`;
+
+    // Display the result
+    document.getElementById("googleResult").innerText = message;
+  }
+</script>
 
 
 
@@ -970,15 +1157,30 @@ Thank you!`;
 
 
 
-  <style>
- 
-</style>
+
 
 <div id="toggleSidebar">☰</div>
 <div id="sidebar" class="collapsed">
   <h3>Sections</h3>
   <ul id="sectionList"></ul>
 </div>
+
+<script>
+  // Function to copy today's date in MM/DD/YYYY format
+  function copyTodayDate() {
+    const today = new Date();
+    const formattedDate = 
+      String(today.getMonth() + 1).padStart(2, '0') + '/' +
+      String(today.getDate()).padStart(2, '0') + '/' +
+      today.getFullYear();
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(formattedDate).then(() => {
+      document.getElementById('todayDate').innerText = formattedDate; // update the visible text
+      showToast(); // reuse your existing toast notification
+    });
+  }
+</script>
 
 <script>
   // Create index from <h2> elements
