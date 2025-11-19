@@ -314,17 +314,17 @@
   <!-- Google Drive sharable links -->
   <div class="field">
     <div class="text">sawanchakraborty100 - Main Resume</div>
-    <button class="copy-btn" onclick="copyResumeLink('https://drive.google.com/file/d/1XrHovF_fWfRFBmja3vphreao9hR7HbU0/view?usp=sharing')">Copy Link</button>
+    <button class="copy-btn" onclick="copyResumeLink('https://drive.google.com/file/d/1ICOD8ff5KBO1nXvwi64kbLlU1VZDfqgd/view?usp=drive_link')">Copy Link</button>
   </div>
 
   <div class="field">
     <div class="text">mail2sawanc - Alt1 Resume</div>
-    <button class="copy-btn" onclick="copyResumeLink('https://drive.google.com/file/d/1iu_gsWl_20gOS3Mva_nNN5H0txZ0FtIk/view?usp=drive_link')">Copy Link</button>
+    <button class="copy-btn" onclick="copyResumeLink('https://drive.google.com/file/d/1kzFzeQvkwtWK1bldI_0le1Zt9G54oDXV/view?usp=drive_link')">Copy Link</button>
   </div>
 
   <div class="field">
     <div class="text">sawcha1105 - Alt2 Resume</div>
-    <button class="copy-btn" onclick="copyResumeLink('https://drive.google.com/file/d/1faX4TSej9npEpIRvRp82TSXD_ZTCX3bC/view?usp=drive_link')">Copy Link</button>
+    <button class="copy-btn" onclick="copyResumeLink('https://drive.google.com/file/d/12HycyRC1HWLKo-jc8A96UoeJG5UPcBL2/view?usp=drive_link')">Copy Link</button>
   </div>
 </div>
 
@@ -371,6 +371,10 @@
   <!-- Skills checkboxes -->
   <div class="field">
     <label>Select Key Skills (choose at least one):</label>
+    <div style="text-align: right; margin-bottom: 10px;">
+      <button class="copy-btn" onclick="selectAllJobSkills()">Select All</button>
+      <button class="copy-btn" onclick="deselectAllJobSkills()">Deselect All</button>
+    </div>
     <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
       <label><input type="checkbox" class="jobSkill" value="Java"> Java</label>
       <label><input type="checkbox" class="jobSkill" value="Python"> Python</label>
@@ -441,7 +445,7 @@
 I recently applied for the ${position}${jobId ? " (Job ID: " + jobId + ")" : ""} (Job Link: ${jobLink}) at ${company} and wanted to briefly introduce myself:
 
 • Recent graduate with a Master’s in Computer Science, Santa Clara University  
-• 3 years at Accenture and Frugal Innovation Hub developing Java-based REST APIs and backend systems  
+• 3 years at NVIDIA, Accenture and Frugal Innovation Hub developing Java-based REST APIs and backend systems  
 • 7-month internship at Caltrain in backend development and cybersecurity  
 • Skills: ${skillsText}  
 
@@ -452,6 +456,14 @@ Sawan C
 M: +1 (650) 663-8910`;
 
     document.getElementById("emailResult").innerText = email;
+  }
+
+  function selectAllJobSkills() {
+    document.querySelectorAll(".jobSkill").forEach(cb => cb.checked = true);
+  }
+
+  function deselectAllJobSkills() {
+    document.querySelectorAll(".jobSkill").forEach(cb => cb.checked = false);
   }
 </script>
 
@@ -485,6 +497,10 @@ M: +1 (650) 663-8910`;
   <!-- Skills checkboxes -->
   <div class="field">
     <label>Select Key Skills (choose at least one):</label>
+    <div style="text-align: right; margin-bottom: 10px;">
+      <button class="copy-btn" onclick="selectAllNetSkills()">Select All</button>
+      <button class="copy-btn" onclick="deselectAllNetSkills()">Deselect All</button>
+    </div>
     <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
       <label><input type="checkbox" class="netSkill" value="Java"> Java</label>
       <label><input type="checkbox" class="netSkill" value="Python"> Python</label>
@@ -552,7 +568,7 @@ M: +1 (650) 663-8910`;
 I recently applied for the ${position} role at ${company} (Job Link: ${jobLink}) and am excited about the opportunity to contribute to innovative technology solutions and complex software systems. I wanted to briefly introduce myself:
 
 • Recent graduate with a Master’s in Computer Science, Santa Clara University  
-• 3 years at Accenture and Frugal Innovation Hub developing Java-based REST APIs and backend systems  
+• 3 years at NVIDIA, Accenture and Frugal Innovation Hub developing Java-based REST APIs and backend systems  
 • 7-month internship at Caltrain in backend development and cybersecurity  
 • Skills: ${skillsText}  
 
@@ -563,6 +579,14 @@ Sawan Chakraborty
 M: +1 (650) 663-8910`;
 
     document.getElementById("netEmailResult").innerText = email;
+  }
+
+  function selectAllNetSkills() {
+    document.querySelectorAll(".netSkill").forEach(cb => cb.checked = true);
+  }
+
+  function deselectAllNetSkills() {
+    document.querySelectorAll(".netSkill").forEach(cb => cb.checked = false);
   }
 </script>
 
@@ -602,6 +626,10 @@ M: +1 (650) 663-8910`;
   <!-- Skills checkboxes -->
   <div class="field">
     <label>Select Key Skills (choose at least one):</label>
+    <div style="text-align: right; margin-bottom: 10px;">
+      <button class="copy-btn" onclick="selectAllMsSkills()">Select All</button>
+      <button class="copy-btn" onclick="deselectAllMsSkills()">Deselect All</button>
+    </div>
     <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
       <label><input type="checkbox" class="msSkill" value="Java"> Java</label>
       <label><input type="checkbox" class="msSkill" value="Python"> Python</label>
@@ -673,7 +701,7 @@ M: +1 (650) 663-8910`;
 I came across your post about the ${position} role${teamText} and was immediately excited about the opportunity to contribute to innovative technology solutions and complex software systems. I have applied for the role using the link you provided and believe my background aligns well with the requirements:
 
 • Recent graduate with a Master’s in Computer Science, Santa Clara University  
-• 3 years at Accenture and Frugal Innovation Hub developing Java-based REST APIs and backend systems  
+• 3 years at NVIDIA, Accenture and Frugal Innovation Hub developing Java-based REST APIs and backend systems  
 • 7-month internship at Caltrain in backend development and cybersecurity  
 • Skills: ${skillsText}  
 
@@ -684,6 +712,14 @@ Sawan C
 M: +1 (650) 663-8910`;
 
     document.getElementById("msEmailResult").innerText = email;
+  }
+
+  function selectAllMsSkills() {
+    document.querySelectorAll(".msSkill").forEach(cb => cb.checked = true);
+  }
+
+  function deselectAllMsSkills() {
+    document.querySelectorAll(".msSkill").forEach(cb => cb.checked = false);
   }
 </script>
 
@@ -890,7 +926,7 @@ Thank you!`;
 
     document.getElementById("msg2Result2").innerText = 
 `${name},
-I am very interested in this role. I bring 3 years of experience with Accenture and Frugal Innovation Hub, along with a Master’s in Computer Science from Santa Clara University. I have strong full-stack development experience across both roles and would love the opportunity to contribute.
+I am very interested in this role. I bring 3 years of experience with NVIDIA, Accenture and Frugal Innovation Hub, along with a Master's in Computer Science from Santa Clara University. I have strong full-stack development experience across both roles and would love the opportunity to contribute.
 
 Resume: ${resume}
 
@@ -1186,7 +1222,7 @@ sawanchakraborty100@gmail.com
 
 
 <div id="toggleSidebar">☰</div>
-<div id="sidebar" class="collapsed">
+<div id="sidebar">
   <h3>Sections</h3>
   <ul id="sectionList"></ul>
 </div>
