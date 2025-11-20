@@ -3,81 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Job Portals & Events</title>
+  <title>Job Application Helper</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Add this to your style.css instead if you want */
-    .card-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-    .card {
-      flex: 1 1 45%; /* each card ~45% width */
-      min-width: 300px; /* don’t shrink too small */
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 15px;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .field {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 8px 0;
-    }
-    .copy-btn {
-      padding: 5px 10px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
 
-  <h1>Job Portals & Events</h1>
+  <h1>Job Application Helper</h1>
 
-  <!-- Row with 2 cards -->
+  <!-- Main container -->
+  <div id="main">
+
+    <!-- Job Portals Section -->
   <div class="card-row">
+      <div class="card numbered-list">
+        <h2>Job Portals</h2>
+        <div class="field"><div class="text">Jobright AI</div><a href="https://jobright.ai/jobs/recommend" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">LinkedIn - Normal Job Portal</div><a href="https://www.linkedin.com/jobs/search/?currentJobId=4318372027&distance=25&f_E=2%2C3&f_JT=F&f_TPR=r86400&geoId=103644278&keywords=software%20engineer&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true&sortBy=R" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Simplify</div><a href="https://simplify.jobs/jobs?state=United%20States&experience=Entry%20Level%2FNew%20Grad%3BJunior&category=Software%20Engineering&mostRecent=true&h1b=true&securityClearance=false&jobId=6c34ab4c-aad8-406a-9177-16956306e937&jobType=Full-Time" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Glassdoor</div><a href="https://www.glassdoor.com/Job/index.htm?prevPage=serp" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">LinkedIn Job Post (Last 24 hours)</div><a href="https://www.linkedin.com/search/results/content/?contentType=%22jobs%22&datePosted=%22past-week%22&keywords=%22Software%20Engineer%22%20AND%20%22Hiring%22&origin=FACETED_SEARCH&sid=2dY&sortBy=%22relevance%22" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Handshake</div><a href="https://scu.joinhandshake.com/job-search/10506395?employmentTypes=1&jobType=9&pay%5BsalaryType%5D=1&majors=13066&degreeLevels=2&workAuthorization=openToUSVisaSponsorship&workAuthorization=openToOptionalPracticalTraining&per_page=25&page=1" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">GitHub New Grad</div><a href="https://github.com/jobright-ai/2025-Software-Engineer-New-Grad" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">GitHub H1B</div><a href="https://github.com/jobright-ai/Daily-H1B-Jobs-In-Tech" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">GitHub New Grad 2026</div><a href="https://github.com/vanshb03/New-Grad-2026" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Wellfound</div><a href="https://wellfound.com/jobs" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">HiringCafe</div><a href="https://hiring.cafe/?searchState=%7B%22seniorityLevel%22%3A%5B%22No+Prior+Experience+Required%22%2C%22Entry+Level%22%5D%2C%22roleTypes%22%3A%5B%22Individual+Contributor%22%5D%2C%22departments%22%3A%5B%22Software+Development%22%5D%2C%22dateFetchedPastNDays%22%3A14%2C%22securityClearances%22%3A%5B%22None%22%5D%2C%22roleYoeRange%22%3A%5B0%2C1%5D%2C%22searchQuery%22%3A%22software+engineer+Grad%22%2C%22sortBy%22%3A%22date%22%7D" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Levels.fyi</div><a href="https://www.levels.fyi/jobs/location/united-states/level/entry?locationSlug=united-states&postedAfterTimeType=days&postedAfterValue=1&jobId=104367930598138566" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Excel List by Jobright Founder</div><a href="https://www.newgrad-jobs.com/" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">CalCareers</div><a href="https://calcareers.ca.gov/CalHRPublic/Search/AdvancedJobSearch.aspx" target="_blank"><button class="copy-btn">Go</button></a></div>
+      </div>
 
-    <!-- Card 1: Job Portals -->
-    <div class="card">
-      <h2>Quick Access Job Portals</h2>
-      <div class="field"><div class="text">LinkedIn Jobs</div><a href="https://www.linkedin.com/jobs/search/?currentJobId=4295410922&distance=25.0&f_E=2&f_TPR=r7200&geoId=103644278&keywords=Software%20Engineer%20New%20Grad&origin=JOBS_HOME_KEYWORD_HISTORY" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">JobRight</div><a href="https://jobright.ai/jobs/recommend" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">Levels.fyi</div><a href="https://www.levels.fyi/jobs" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">Indeed</div><a href="https://www.indeed.com" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">Simplify</div><a href="https://simplify.jobs" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">Glassdoor</div><a href="https://www.glassdoor.com/Job/index.htm" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">Monster</div><a href="https://www.monster.com" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">ZipRecruiter</div><a href="https://www.ziprecruiter.com" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">Hired</div><a href="https://hired.com" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">Wellfound (AngelList Talent)</div><a href="https://wellfound.com/jobs" target="_blank"><button class="copy-btn">Go</button></a></div>
+      <!-- Networking Section -->
+      <div class="card numbered-list">
+        <h2>Networking</h2>
+        <div class="field"><div class="text">Meetup - Recruitment</div><a href="https://www.meetup.com/find/?location=us--ca--Sunnyvale&source=EVENTS&categoryId=546" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Luma</div><a href="https://luma.com/discover" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Eventbrite</div><a href="https://www.eventbrite.com/" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Gary's Guide</div><a href="https://www.garysguide.com/events?region=sf&utm_source=chatgpt.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Cerebral</div><a href="https://cerebralvalley.ai/events?utm_source=chatgpt.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Devpost</div><a href="https://secure.devpost.com/users/login" target="_blank"><button class="copy-btn">Go</button></a></div>
+      </div>
     </div>
 
-    <!-- Card 2: Events & Hackathons -->
-    <div class="card">
-      <h2>Events & Hackathons</h2>
-      <div class="field"><div class="text">Devpost</div><a href="https://devpost.com" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">MLH (Major League Hacking)</div><a href="https://mlh.io" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">Hackathon.com</div><a href="https://www.hackathon.com" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">Eventbrite Tech Events</div><a href="https://www.eventbrite.com/d/online/tech--events/" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">IEEE Events</div><a href="https://www.ieee.org/conferences/index.html" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">ACM Conferences</div><a href="https://www.acm.org/conferences" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">TechCrunch Events</div><a href="https://techcrunch.com/events/" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">Meetup Tech</div><a href="https://www.meetup.com/topics/tech/" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">AngelHack</div><a href="https://angelhack.com" target="_blank"><button class="copy-btn">Go</button></a></div>
-      <div class="field"><div class="text">HackClub</div><a href="https://hackclub.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+    <!-- Recruiter Tools Section -->
+    <div class="card-row">
+    <div class="card numbered-list">
+        <h2>Recruiter Email Search Engine</h2>
+        <div class="field"><div class="text">Hunter.io</div><a href="https://hunter.io/search/hunter.io?product_tour_id=389437" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">PhantomBuster</div><a href="https://phantombuster.com/phantombuster" target="_blank"><button class="copy-btn">Go</button></a></div>
+      </div>
+    </div>
+
+    <!-- Company Career Portals Section -->
+    <div class="card-row">
+    <div class="card numbered-list">
+        <h2>Company Career Portals</h2>
+        <div class="field"><div class="text">Amazon</div><a href="https://www.amazon.jobs" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Microsoft</div><a href="https://careers.microsoft.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Google</div><a href="https://careers.google.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Meta</div><a href="https://www.metacareers.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Oracle</div><a href="https://www.oracle.com/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Apple</div><a href="https://jobs.apple.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Adobe</div><a href="https://www.adobe.com/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Cisco</div><a href="https://www.cisco.com/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Intel</div><a href="https://jobs.intel.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Goldman Sachs</div><a href="https://www.goldmansachs.com/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Barclays</div><a href="https://search.jobs.barclays/" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">PayPal</div><a href="https://www.paypal.com/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Salesforce</div><a href="https://www.salesforce.com/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">HPE</div><a href="https://careers.hpe.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">NetApp</div><a href="https://www.netapp.com/company/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Workday</div><a href="https://www.workday.com/en-us/company/careers.html" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">IBM</div><a href="https://www.ibm.com/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Uber</div><a href="https://www.uber.com/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Lyft</div><a href="https://www.lyft.com/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">LinkedIn</div><a href="https://www.linkedin.com/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">NVIDIA</div><a href="https://www.nvidia.com/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">ServiceNow</div><a href="https://careers.servicenow.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Block (Square)</div><a href="https://block.xyz/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Airbnb</div><a href="https://careers.airbnb.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Snowflake</div><a href="https://careers.snowflake.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Qualcomm</div><a href="https://www.qualcomm.com/company/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">AMD</div><a href="https://www.amd.com/en/corporate/careers" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Texas Instruments</div><a href="https://careers.ti.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">SAP</div><a href="https://jobs.sap.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">VMware/Broadcom</div><a href="https://careers.vmware.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Dell Technologies</div><a href="https://jobs.dell.com" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Splunk</div><a href="https://www.splunk.com/en_us/careers.html" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Plaid</div><a href="https://plaid.com/careers/#search" target="_blank"><button class="copy-btn">Go</button></a></div>
+        <div class="field"><div class="text">Yahoo</div><a href="https://www.yahooinc.com/careers/search.html" target="_blank"><button class="copy-btn">Go</button></a></div>
+      </div>
     </div>
 
   </div>
 
   <!-- Sidebar toggle + index -->
   <div id="toggleSidebar">☰</div>
-  <div id="sidebar" class="collapsed">
+  <div id="sidebar">
     <h3>Sections</h3>
     <ul id="sectionList"></ul>
   </div>
